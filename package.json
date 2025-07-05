@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "homepage": "https://tecdocs.github.io/cumulus-ui-library",
-  "scripts": {
-    "storybook": "sb dev",
-    "build-storybook": "sb build",
+"scripts": {
+  "storybook": "storybook dev --config-dir .storybook/storybook",
+  "build-storybook": "storybook build --config-dir .storybook/storybook",
     "docusaurus": "docusaurus",
     "start": "docusaurus start --port 3000",
     "build": "docusaurus build",
@@ -35,11 +35,12 @@
     "@storybook/addon-essentials": "^8.6.14",
     "@storybook/addon-themes": "^8.6.14",
     "@storybook/cli": "^8.6.14",
-    "@storybook/react": "^8.6.14",
-    "@storybook/react-webpack5": "^8.6.14",
+    "@storybook/react-vite": "^8.6.14",
     "babel-loader": "^10.0.0",
     "eslint": "^9.30.1",
-    "eslint-plugin-react": "^7.37.5"
+    "eslint-plugin-react": "^7.37.5",
+    "vite": "^6.3.5",
+    "vite-plugin-svgr": "^4.3.0"
   },
   "browserslist": {
     "production": [
