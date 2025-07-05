@@ -5,13 +5,12 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const config = {
   title: 'Cumulus UI Library',
   tagline: 'Build scalable UI with confidence',
-  favicon: 'img/cloud.svg', // ✅ Your cloud icon as favicon
+  favicon: 'img/cloud.svg',
 
-  // ✅ GitHub Pages config
   url: 'https://tecdocs.github.io',
-  baseUrl: '/cumulus-ui-library/', // ✅ Matches your GitHub repo name
-  organizationName: 'TecDocs', // ✅ GitHub username or org
-  projectName: 'cumulus-ui-library', // ✅ GitHub repo name
+  baseUrl: '/cumulus-ui-library/',
+  organizationName: 'TecDocs',
+  projectName: 'cumulus-ui-library',
   deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
@@ -39,51 +38,62 @@ const config = {
     ],
   ],
 
-  themeConfig: {
-    image: 'img/docusaurus-social-card.jpg',
-    navbar: {
-      title: 'Cumulus UI Library',
-      logo: {
-        alt: 'Cumulus Logo',
-        src: 'img/cloud.svg', // ✅ Cloud icon as logo
+ themeConfig: {
+  image: 'img/cloud.svg',
+  navbar: {
+    title: 'Cumulus UI Library',
+    logo: {
+      alt: 'Cumulus Logo',
+      src: 'img/stormcloud.svg',
+    },
+    items: [
+      {
+        type: 'html',
+        position: 'left',
+        value: `
+          <span class="header-project-desc">
+            Welcome to Cumulus UI Library – A fully documented internal UI and design system library built for enterprise workflows
+          </span>
+        `,
       },
-      items: [
-        {
-          href: 'https://joshua-schoen.com',
-          position: 'right',
-          className: 'custom-icon portfolio-icon',
-          'aria-label': 'Portfolio',
-        },
-        {
-          href: 'https://github.com/TecDocs/cumulus-ui-library',
-          position: 'right',
-          className: 'custom-icon github-icon',
-          'aria-label': 'GitHub',
-        },
-        {
-          href: 'https://www.linkedin.com/in/joshua-schoen-77b742252/',
-          position: 'right',
-          className: 'custom-icon linkedin-icon',
-          'aria-label': 'LinkedIn',
-        },
-        {
-          href: 'https://substack.com/@tecdocs',
-          position: 'right',
-          className: 'custom-icon substack-icon',
-          'aria-label': 'Substack',
-        },
-      ],
-    },
-    footer: {
-      style: 'dark',
-      links: [],
-      copyright: `© ${new Date().getFullYear()} Joshua Schoen • Cumulus UI`,
-    },
-    prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
-    },
+      // 🚫 Removed the right-side <div class="header-icon-stack"> to prevent conflict
+    ],
   },
+
+  footer: {
+    style: 'dark',
+    links: [
+      {
+        title: 'Connect',
+        items: [
+          {
+            label: 'Portfolio',
+            href: 'https://joshua-schoen.com',
+          },
+          {
+            label: 'GitHub',
+            href: 'https://github.com/TecDocs/cumulus-ui-library',
+          },
+          {
+            label: 'LinkedIn',
+            href: 'https://www.linkedin.com/in/joshua-schoen-77b742252/',
+          },
+          {
+            label: 'Substack',
+            href: 'https://substack.com/@tecdocs',
+          },
+        ],
+      },
+    ],
+    copyright: `© ${new Date().getFullYear()} Joshua Schoen • Cumulus UI`,
+  },
+
+  prism: {
+    theme: prismThemes.github,
+    darkTheme: prismThemes.dracula,
+  },
+},
+
 
   plugins: [],
 

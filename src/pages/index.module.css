@@ -1,23 +1,39 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
   position: relative;
   overflow: hidden;
+  height: 100vh; /* or min-height */
+  padding: 0;
+  background: transparent; /* Don’t override sky */
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
+
+.cloudContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cloud-float {
+  position: absolute;
+  width: 120px;
+  animation-name: floatClouds;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  z-index: 1;
+}
+
+@keyframes floatClouds {
+  0% {
+    transform: translateX(-150px) translateY(0);
   }
-}
-
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  50% {
+    transform: translateX(50vw) translateY(-10px);
+  }
+  100% {
+    transform: translateX(120vw) translateY(0);
+  }
 }

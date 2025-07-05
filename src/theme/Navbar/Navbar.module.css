@@ -1,0 +1,53 @@
+.headerIcons {
+  display: flex;
+  align-items: center;     /* ensures vertical alignment */
+  justify-content: flex-end;
+  gap: 0.8rem;             /* control horizontal spacing */
+  margin-top: 1rem;         /* optional tweak for vertical centering */
+  margin-right: 1rem;
+  height: 100%;            /* ensures alignment with other nav items */
+}
+
+.iconLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;            /* standard clickable area */
+  height: 28px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.iconLink:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+}
+
+[data-theme='dark'] .iconLink:hover {
+  filter: drop-shadow(0 0 8px white);
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  opacity: 0;
+  transform: translateY(-6px);
+  animation: iconFadeSlide 0.6s ease forwards;
+}
+
+/* Optional delay cascade */
+.iconLink:nth-child(1) .icon { animation-delay: 0.1s; }
+.iconLink:nth-child(2) .icon { animation-delay: 0.2s; }
+.iconLink:nth-child(3) .icon { animation-delay: 0.3s; }
+.iconLink:nth-child(4) .icon { animation-delay: 0.4s; }
+
+@keyframes iconFadeSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-theme='dark'] .icon {
+  filter: brightness(5) drop-shadow(0 0 4px white);
+}
