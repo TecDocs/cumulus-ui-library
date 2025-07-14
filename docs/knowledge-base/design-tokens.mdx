@@ -1,3 +1,185 @@
-# 🎨 Design Tokens
+---
+id: design-tokens
+slug: /knowledge-base/design-tokens
+title: "🎨 Design Tokens"
+sidebar_label: "🎨 Design Tokens"
+---
 
-Document token categories and usage examples.
+import {
+  CloudTokenGrid,
+  ThemeSplitCloud,
+  CloudTokenLineage,
+  TokenCalloutCloud,
+  AccessibilityContrastCloud,
+  TokenUsageCloud,
+  FloatInLeft,
+  FloatInRight,
+  FloatInPlace,
+  AnimatedFigureCaption
+} from '@site/src/components/KnowledgeBaseComps';
+
+<FloatInPlace>
+# 🎨 Design Tokens
+</FloatInPlace>
+
+---
+
+## ☁️ What Are Tokens?
+
+<FloatInLeft>
+Design tokens are the **atomic units of your design system**, comparable to molecules in a cloud formation. Just as clouds are formed by countless water particles governed by atmosphere and physics, design tokens form the foundation of your visual language. They allow teams to abstract raw values like <code>#3F8CFF</code> or <code>16px</code> into **meaningful variables** such as <code>--color-primary</code> and <code>--spacing-md</code>. This abstraction allows style to become **semantic**, repeatable, and manageable.
+</FloatInLeft>
+
+<FloatInRight>
+Rather than hardcoding decisions into every component or style sheet, tokens allow you to **encode design decisions once**, then apply them universally. This ensures that updates are **systematic**, not scattered. A change in your base radius can ripple across the entire product interface without needing manual edits. This approach creates **greater consistency**, **faster iterations**, and **fewer regressions** across your UI.
+</FloatInRight>
+
+<FloatInLeft>
+Imagine you're managing a storm cloud of UI components. With tokens, every droplet, every property, is traceable and aligned. Developers no longer guess which shade of blue to use or how much padding belongs in a card. Instead, they follow a **centralized visual vocabulary** that reflects shared design intent.
+</FloatInLeft>
+
+<FloatInRight>
+Designers also benefit significantly. When tokens are synced to Figma libraries or other design tools, **every role speaks the same language**. Tokens act as a bridge between pixels and code, fostering seamless collaboration between **design, engineering, product, QA, and compliance** teams.
+</FloatInRight>
+
+<CloudTokenGrid
+  tokens={[
+    { name: "--color-primary", type: "Color", value: "#3F8CFF", usage: "Buttons, links" },
+    { name: "--spacing-md", type: "Spacing", value: "16px", usage: "Card padding, form spacing" },
+    { name: "--radius-card", type: "Radius", value: "12px", usage: "Modal and card borders" },
+    { name: "--font-size-lg", type: "Typography", value: "20px", usage: "Large headlines" }
+  ]}
+/>
+<AnimatedFigureCaption>Figure 1. Common foundational tokens shown in a light and dark mode friendly cloud grid.</AnimatedFigureCaption>
+
+<FloatInLeft>
+In short, tokens are not just variables. They are **semantic agreements**. They declare, “This is our primary color,” or “This is our standard vertical rhythm,” and encode those values into shareable logic. This abstraction enables **scalability**, **brand consistency**, and **futureproofing**.
+</FloatInLeft>
+
+<FloatInRight>
+Next, we’ll explore how tokens enable dynamic theme switching. By binding light and dark values to the same semantic name, entire UIs can shift modes without disrupting the underlying structure. This is a major win for accessibility and branding.
+</FloatInRight>
+
+---
+
+## 🌗 Light and Dark Token Pairs
+
+<FloatInLeft>
+Many systems struggle with dual-theme consistency, but semantic tokens make this easier than ever. A token like <code>--color-surface</code> might resolve to <code>#FFFFFF</code> in light mode, and <code>#1A1A1A</code> in dark mode. This keeps **brand identity**, **legibility**, and **accessibility** intact, all without duplicating styles.
+</FloatInLeft>
+
+<ThemeSplitCloud
+  lightLabel="Light Mode"
+  darkLabel="Dark Mode"
+  tokenName="--color-surface"
+  lightValue="#FFFFFF"
+  darkValue="#1A1A1A"
+/>
+<AnimatedFigureCaption>Figure 2. A semantic surface token mapped to theme-specific values to support light and dark modes.</AnimatedFigureCaption>
+
+<FloatInRight>
+By separating the token definition from rendering, teams can ship **themes**, **a11y fixes**, or **branding updates** without touching the core UI logic. You effectively separate **the what from the how**, enabling flexible front-end architecture and better design governance.
+</FloatInRight>
+
+---
+
+## 🌿 Token Inheritance and Structure
+
+<FloatInRight>
+Not all tokens exist independently. Some are **derived** or **inherited** from a base. For instance, <code>--color-primary-hover</code> might simply be a lighter variant of <code>--color-primary</code>. Instead of redefining every related token manually, you define **token relationships**.
+</FloatInRight>
+
+<CloudTokenLineage
+  root="--color-primary"
+  children={["--color-primary-button", "--color-primary-hover", "--color-primary-border"]}
+/>
+<AnimatedFigureCaption>Figure 3. A hierarchical token lineage illustrating dependencies across a primary color family.</AnimatedFigureCaption>
+
+<FloatInLeft>
+This model mirrors smart software engineering principles, like **Don’t Repeat Yourself (DRY)**. Tokens represent **intentional structure**, not coincidental overlap. This helps enterprises apply brand rules across many apps without inconsistency.
+</FloatInLeft>
+
+---
+
+## 💬 Code-Like Token Usage
+
+<FloatInLeft>
+Design tokens aren't abstract — they live in real codebases. A design tool might define <code>--spacing-md</code> in a UI library, but developers see it as a **CSS custom property**, a **JavaScript object**, or even in **platform-specific tokens** for native apps.
+</FloatInLeft>
+
+<TokenCalloutCloud
+  token="--radius-card"
+  value="12px"
+  alias="--radius-base"
+  note="Used for modal, dropdown, and card corners"
+/>
+<AnimatedFigureCaption>Figure 4. A CSS token alias improves clarity, reusability, and update propagation across multiple components.</AnimatedFigureCaption>
+
+<FloatInRight>
+This mapping is vital for accuracy. The **design-approved border radius** should match the actual implementation, down to the pixel. Tokenized systems help enforce this, eliminating visual drift and increasing design-to-dev trust.
+</FloatInRight>
+
+---
+
+## ♿ Accessibility and Contrast
+
+<FloatInRight>
+Accessibility is a **core system priority**, not an afterthought. Token systems can ensure contrast ratios meet **WCAG standards** by pairing compatible foreground and background values. This means **inclusive design** is baked into the system from day one.
+</FloatInRight>
+
+<AccessibilityContrastCloud
+  backgroundColor="#1A1A1A"
+  textColor="#FFFFFF"
+  pass={true}
+/>
+<AnimatedFigureCaption>Figure 5. A contrast validation test using semantic tokens to ensure legibility on dark backgrounds.</AnimatedFigureCaption>
+
+<FloatInLeft>
+Beyond compliance, tokens offer **visual safety**. Developers no longer need to calculate ratios manually or worry about styling edge cases. Tokens encode accessibility logic directly into the system’s DNA.
+</FloatInLeft>
+
+---
+
+## 🧭 Where Tokens Live and Breathe
+
+<FloatInLeft>
+Tokens are **everywhere** — in buttons, modals, alerts, inputs, and empty states. They power **spacing**, **colors**, **typography**, **shadows**, **elevation**, and even **motion curves**. A single update to a core token can touch **hundreds of elements**, improving or aligning them instantly.
+</FloatInLeft>
+
+<TokenUsageCloud
+  token="--spacing-md"
+  usedIn={["Card", "FormField", "Modal", "ListItem"]}
+/>
+<AnimatedFigureCaption>Figure 6. A spacing token referenced across multiple components to ensure consistent layout rhythm.</AnimatedFigureCaption>
+
+<FloatInRight>
+Your token system should be **actively managed**, not set in stone. Review usage often, merge overlapping values, and refactor redundancies. A living system adapts as the product grows, keeping design and code in sync.
+</FloatInRight>
+
+---
+
+## 📘 Recap and What’s Next
+
+<FloatInLeft>
+Design tokens are the **engine oil of your UI system**, invisible to the user, but vital for scalability, responsiveness, and long-term maintainability. They abstract raw values into **semantically meaningful variables**, bridging the gap between visual intent and technical implementation. By enforcing a **shared design language**, tokens eliminate ambiguity across teams. No more guessing which spacing to use or which color represents the brand, predefined contracts clarify expectations across themes, breakpoints, and platforms.
+</FloatInLeft>
+
+<FloatInRight>
+Tokens enable true **governance and velocity**. Need to update brand colors, introduce dark mode, or tweak motion timings? These changes are **low-effort**, **high-impact**, and ripple through the system cleanly. A good analogy is **musical notation**: tokens are notes on a sheet. Designers are the composers, developers are the performers, and tokens are the structured score that keeps all contributors in harmony, guiding collaboration, review, and iteration with precision.
+</FloatInRight>
+
+<FloatInLeft>
+A mature token system reinforces **accessibility**, **responsiveness**, and **brand unity**. It reduces override fatigue, improves UI predictability, and removes guesswork. Everything from spacing rules and button elevation to mobile breakpoints and color contrast ratios can be driven by token logic. This ensures that decisions are not only **systematic**, but also **intentional**, allowing your system to grow with confidence.
+</FloatInLeft>
+
+<FloatInRight>
+Tokens also support **fast onboarding**, **cross-platform alignment**, and **long-term stability**. Whether your team builds with React, SwiftUI, Web Components, or something new, tokens serve as a **tech-agnostic glue** that binds visual identity together. They simplify framework migrations, reduce styling debt, and future-proof your design logic as your stack evolves.
+</FloatInRight>
+
+<FloatInLeft>
+Lastly, tokens foster **collaborative alignment**. With strong documentation and tooling, they act as **living contracts** between designers, engineers, QA, and product. They remove friction from feedback loops, accelerate design-to-dev handoffs, and enable faster product development cycles. The result is a system that’s not only efficient, but deeply integrated, a true engine for scalable UI delivery.
+</FloatInLeft>
+
+<FloatInLeft>
+In the next section, we’ll explore how atomic values scale into **modular components**. Think of tokens as elements and components as molecules. Together, they enable structured systems that are **accessible**, **reusable**, and **ready to scale**, all while maintaining the visual clarity and brand integrity your users expect.
+</FloatInLeft>

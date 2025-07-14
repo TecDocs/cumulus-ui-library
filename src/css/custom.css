@@ -137,3 +137,31 @@ html[data-theme='dark'] .header-icon-link:hover {
 .footer a:hover {
   opacity: 0.75;
 }
+
+
+/* In your custom.css or local module.css */
+.glowEffect {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6), 0 0 16px rgba(0, 123, 255, 0.3);
+  transition: all 0.3s ease-in-out;
+  border-radius: 12px;
+}
+
+.glowEffect:hover {
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.9), 0 0 24px rgba(0, 123, 255, 0.5);
+  transform: scale(1.02);
+}
+
+/* === Sticky Navbar Header === */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: var(--ifm-navbar-background-color, #fff);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* subtle shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+html[data-theme='dark'] .navbar {
+  background-color: var(--ifm-navbar-background-color, #1c1c1e);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.06);
+}
+

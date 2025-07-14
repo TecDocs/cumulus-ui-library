@@ -1,0 +1,44 @@
+.timelineWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 16px;
+  background: var(--ifm-background-surface-color);
+  box-shadow: 0 0 12px var(--ifm-color-primary);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.versionBox {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  background: var(--ifm-background-color);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.35);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.versionLabel {
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.versionText {
+  font-weight: 500;
+  font-size: 0.95rem;
+  opacity: 0.85;
+  text-align: center;
+}
+
+.arrow {
+  font-size: 2rem;
+  margin-left: 1.5rem;
+  color: var(--ifm-color-primary);
+}

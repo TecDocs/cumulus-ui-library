@@ -1,3 +1,194 @@
-# 🧭 Onboarding
+---
+id: onboarding
+slug: /knowledge-base/onboarding
+title: "🚀 Onboarding"
+sidebar_label: "🚀 Onboarding"
+---
 
-Intro docs for new contributors and designers.
+import {
+  FloatInPlace,
+  FloatInLeft,
+  FloatInRight,
+  CloudBulletList,
+  AnimatedFigureCaption,
+  ComponentShowcaseWalkthrough,
+  GuidedPathwayCloud,
+  OnboardingChecklistCloud,
+  PersonaRoleIntroCloud,
+  RoleBasedStartCloud
+} from '@site/src/components/KnowledgeBaseComps';
+
+<FloatInPlace>
+# 🚀 Onboarding
+</FloatInPlace>
+
+<FloatInLeft>
+In any professional system, onboarding represents the **first meaningful interaction** between contributor and framework. At Cumulus, this experience is not reduced to a passive greeting or list of links. Instead, onboarding acts as a **contextual launch platform**, tailored to your **role**, **confidence level**, and **real-world goals**. The intent is not to show everything, but to show what matters—at the right time, for the right person.
+</FloatInLeft>
+
+<FloatInRight>
+From the very first interaction, the system prioritizes **clarity**, **structured progression**, and **user autonomy**. Designers should not waste time guessing where spacing tokens are located. Engineers should not need to reverse-engineer prop behavior. Product stakeholders should never be disconnected from interface rationale. Onboarding at Cumulus is built to **accelerate contribution**, not delay it.
+</FloatInRight>
+
+---
+
+## 🧑‍🚀 Persona-Based Role Intros
+
+<FloatInLeft>
+Before we can show you where to go, we recognize who you are. Each contributor arrives with distinct **mental models**, **priorities**, and **skills**. Rather than treating everyone identically, we surface a **personalized entry point** using the `PersonaRoleIntroCloud`. This component ensures your first step is both familiar and relevant.
+</FloatInLeft>
+
+<PersonaRoleIntroCloud />
+
+<AnimatedFigureCaption>
+Figure 1. Role-based onboarding that adapts key content based on whether you're a designer, developer, or product stakeholder.
+</AnimatedFigureCaption>
+
+<FloatInRight>
+The system filters complexity through your lens. A **designer** is shown layout logic and accessibility affordances. A **developer** sees prop interfaces and token behavior. A **PM** sees clarity around visibility and feature control. This **intentional filtering** eliminates confusion, builds trust, and respects the contributor's time from the beginning.
+</FloatInRight>
+
+---
+
+## 🗺️ Guided Visual Pathways
+
+<FloatInRight>
+Once we’ve oriented you based on your role, the next need is **direction**. The `GuidedPathwayCloud` provides a **structured journey**, not a rigid syllabus. By highlighting key waypoints, progressions, and milestones, contributors move through the system with both **freedom** and **confidence**.
+</FloatInRight>
+
+<GuidedPathwayCloud />
+
+<AnimatedFigureCaption>
+Figure 2. A visual onboarding pathway showing entry points, milestones, and recommended learning sequences within the system.
+</AnimatedFigureCaption>
+
+<FloatInLeft>
+Without visual guidance, even great documentation can feel overwhelming. Our pathways use **progressive disclosure**, starting with core concepts and expanding based on readiness. This flow reinforces **recall**, supports **mental mapping**, and empowers contributors to re-enter the system without friction.
+</FloatInLeft>
+
+<CloudBulletList
+  bullets={[
+    'Clear visual segmentation of onboarding steps',
+    'Highlighting system milestones and key first actions',
+    'Minimizing overwhelm by offering sequence and order',
+    'Enabling autonomy while providing safe structure'
+  ]}
+/>
+
+---
+
+## ✅ Interactive Onboarding Checklist
+
+<FloatInLeft>
+Awareness alone is not enough. People retain knowledge when they **act on it**. The `OnboardingChecklistCloud` reinforces this principle by letting contributors mark what they’ve seen, practiced, or mastered. This lightweight action anchors abstract knowledge to **concrete progress**.
+</FloatInLeft>
+
+<OnboardingChecklistCloud />
+
+<AnimatedFigureCaption>
+Figure 3. A checklist-style onboarding overlay that tracks documentation walkthroughs, role-specific items, and readiness states.
+</AnimatedFigureCaption>
+
+<FloatInRight>
+The benefits extend beyond the individual. Teams gain **visibility**, managers can **assign intelligently**, and new contributors see exactly what’s left to explore. This checklist becomes a **living tracker** for distributed work, remote onboarding, or team scaling efforts. It turns a static process into a **shared progress narrative**.
+</FloatInRight>
+
+<CloudBulletList
+  bullets={[
+    'Checklists drive active learning and retention',
+    'Progress indicators encourage team accountability',
+    'Teammates pick up where they left off',
+    'Coverage verification becomes simple and trackable'
+  ]}
+/>
+
+---
+
+## 🎯 Role-Based Getting Started
+
+<FloatInRight>
+Orientation and discovery set the stage, but **momentum** only happens when contributors begin doing real work. The `RoleBasedStartCloud` bridges that gap. It creates direct pathways into meaningful sections of the system based on **persona type** and **workstream focus**.
+</FloatInRight>
+
+<RoleBasedStartCloud />
+
+<AnimatedFigureCaption>
+Figure 4. Role-aware action starters that launch users directly into relevant areas of the design system.
+</AnimatedFigureCaption>
+
+<FloatInLeft>
+Developers are pointed toward APIs and component previews. Designers land in spacing grids or typographic scales. PMs are routed to governance documentation or system roadmaps. Each path is **actionable**, **efficient**, and **tailored**, reducing ambiguity and eliminating wasted time.
+</FloatInLeft>
+
+---
+
+## 🧩 Component Showcase Walkthrough
+
+<FloatInLeft>
+Once contributors understand the framework, they should also **see its power**. The `ComponentShowcaseWalkthrough` does not just highlight components—it contextualizes them inside **real UI environments**. This gives contributors an instant grasp of **design intent**, **usage variation**, and **theme responsiveness**.
+</FloatInLeft>
+
+<ComponentShowcaseWalkthrough />
+
+<AnimatedFigureCaption>
+Figure 5. Interactive component showcase highlighting typical UI patterns, their usage context, and theming behavior.
+</AnimatedFigureCaption>
+
+<FloatInRight>
+This view acts as both a teaching tool and a **trust builder**. Instead of asking contributors to imagine what a system might look like, we show them. When people see polish, consistency, and adaptability from the beginning, they internalize those values—and replicate them throughout their work.
+</FloatInRight>
+
+---
+
+## 🧠 Recap: What You Learned
+
+<CloudBulletList
+  bullets={[
+    'Onboarding is contextual, not generic',
+    'Role-based content builds relevance and trust',
+    'Guided pathways provide structured exploration',
+    'Checklists reinforce completion and accountability',
+    'Launchpads drive immediate action by discipline',
+    'Showcases inspire adoption and curiosity'
+  ]}
+/>
+
+<FloatInLeft>
+Together, these elements form a **complete onboarding architecture**. It is structured but flexible, rigorous yet intuitive. Contributors walk away not just feeling welcomed, but **activated**. They do not just know where things live—they know how to use them, why they matter, and where to go next.
+</FloatInLeft>
+
+<FloatInRight>
+This is how onboarding succeeds. Not by overwhelming people with information, but by sequencing that information in a way that **respects cognition**, **builds confidence**, and **fosters engagement**. Cumulus treats onboarding not as a sidebar, but as a primary strategic advantage.
+</FloatInRight>
+
+---
+
+## ⏭️ What’s Next: Glossary
+
+<FloatInLeft> 
+At this point, you've seen how onboarding is structured, personalized, and delivered through layered interaction. What comes next is **language**. Without shared definitions, systems drift into miscommunication and silos. The glossary is your anchor. It holds every key term, every pattern, every concept this system relies on.
+</FloatInLeft>
+
+<CloudBulletList
+  bullets={[
+    'Anchor key terms to shared definitions',
+    'Reduce confusion with consistent vocabulary',
+    'Clarify roles, tokens, and system logic for future contributors'
+  ]}
+/>
+
+<FloatInRight>
+The glossary is not an appendix—it’s the **operational memory** of the design system. By giving clear, living definitions to terms like “role tag,” “variant,” or “token,” we avoid guesswork and encourage cohesion across teams, time zones, and updates.
+</FloatInRight>
+
+<FloatInLeft>
+Think of it like a shared brain. Every contributor, whether new or seasoned, benefits from returning to the same terms, defined once and used everywhere. It makes documentation scalable, conversation precise, and onboarding repeatable.
+</FloatInLeft>
+
+<FloatInRight>
+In the end, the glossary does more than clarify. It empowers. It grants fluency in a complex system and supports contributors in **speaking the same language**, using the same principles, and building the same future.
+</FloatInRight>
+
+<FloatInLeft>
+So as you continue deeper into components, usage guides, and contribution workflows, keep the glossary within reach. It is your reference, your decoder, and your companion. The stronger your grip on terminology, the stronger your impact across the system.
+</FloatInLeft>

@@ -1,14 +1,197 @@
 ---
 id: intro
 slug: /knowledge-base/intro
-title: "📘 Knowledge Base"
-sidebar_label: "📘 Knowledge Base"
+title: "🌤️ Knowledge Base"
+sidebar_label: "🌤️ Knowledge Base Introduction "
 ---
-import CloudDefinitionReal from '@site/src/components/CloudDefinitionReal';
 
+import {
+  HeroStackCloud,
+  MissionQuoteCloud,
+  KnowledgePillarsRow,
+  CloudCTA,
+  CloudBulletList,
+  CloudFigure,
+  CloudNoteBox,
+  FloatingHeader,
+  FloatInLeft,
+  FloatInRight,
+  FloatInPlace,
+  FloatInWhenVisible,
+  AnimatedFigureCaption
+} from '@site/src/components/KnowledgeBaseComps';
 
-<div style={{ marginTop: '1rem' }}>
-  This system prioritizes <CloudDefinitionReal term="accessibility">
-    The practice of making digital interfaces usable by people of all abilities, including those with visual, motor, or cognitive impairments.
-  </CloudDefinitionReal> in all components.
-</div>
+<FloatInPlace>
+# 🌤️ Welcome to the Cumulus UI Knowledge Base
+</FloatInPlace>
+
+<MissionQuoteCloud quote="Knowledge should not live in silos. It should flow like clouds—visible, shareable, and always evolving." author="Cumulus Team" />
+
+<FloatInLeft>
+In today’s distributed product environments, teams don’t just need documentation, they need **reliable systems of knowledge**. Without clear frameworks, even the best design systems fall victim to confusion, duplicated effort, and style regressions. That’s why this Knowledge Base exists, not just as a companion to your UI components, but as a **living documentation operating system**. It governs decisions, outlines logic, and provides a source of truth that scales across contributors.
+</FloatInLeft>
+
+<FloatInRight>
+As your system evolves, this documentation evolves with it. Every component, token, and pattern in Cumulus is traceable through structured logic, no more Slack archaeology or scattered Figma notes. This centralized approach doesn’t just reduce overhead, it **builds team-wide confidence**. When knowledge is reliable, everyone can contribute, review, and evolve the system efficiently.
+</FloatInRight>
+
+<FloatInLeft>
+The Knowledge Base is organized intentionally. You’ll begin with foundational layers like **Design Tokens**, move through modular systems such as **Component Structure**, and gradually explore behavioral, governance, and accessibility patterns. Each page connects visually, semantically, and structurally to the next. That’s not an accident, it’s a **protocol**.
+</FloatInLeft>
+
+<FloatInRight>
+From onboarding new engineers to revisiting old design choices, the value is immediate, fewer meetings, fewer mistakes, and greater autonomy. We treat every documentation page like a reusable asset, governed by shared principles and styled with clarity. This creates **design infrastructure that lasts**.
+</FloatInRight>
+
+<FloatInLeft>
+Let’s take a closer look at the foundational values that power this system. These pillars are more than just guiding principles, they are the filters through which every piece of content is created, reviewed, and maintained.
+</FloatInLeft>
+
+---
+
+<KnowledgePillarsRow
+  pillars={[
+    {
+      title: "🧬 System Thinking",
+      description: "Understand how design tokens and UI components evolve and scale together."
+    },
+    {
+      title: "🔍 Transparent Decisions",
+      description: "Track the reasoning behind styles, names, and component updates with confidence."
+    },
+    {
+      title: "🚀 Accelerated Onboarding",
+      description: "Help new team members ramp up quickly with self-service logic paths and rich visuals."
+    }
+  ]}
+/>
+<AnimatedFigureCaption>Figure 2. Cumulus Pillars, foundational values behind scalable knowledge systems.</AnimatedFigureCaption>
+
+<FloatInLeft>
+**System Thinking** ensures we see components not as isolated fragments, but as living participants in a larger design language. This pillar underpins our token hierarchy, color mapping, and even animation decisions. It invites designers and engineers to consider not just appearance, but **function, inheritance, and context**.
+</FloatInLeft>
+
+<FloatInRight>
+**Transparent Decisions** is our antidote to legacy drift. When you open a component file, read a token definition, or reference a usage pattern, you should instantly know _why_ it exists, _who_ created it, and _how_ it evolved. Every choice is backed by rationale, whether visual, technical, or accessibility-driven.
+</FloatInRight>
+
+<FloatInLeft>
+**Accelerated Onboarding** turns our documentation into a product in its own right. New team members don’t need walkthroughs, they follow logic paths. From glossary definitions to component lifecycles, everything is interactive, layered, and easy to digest at your own pace. That’s not just helpful, it’s scalable.
+</FloatInLeft>
+
+<FloatInRight>
+These pillars aren’t theoretical. They were distilled from actual pain points, late-stage design rewrites, accessibility issues from overlooked decisions, and inconsistent development practices. This Knowledge Base exists to solve those problems in real time, every time.
+</FloatInRight>
+
+<FloatInLeft>
+Let’s explore what lives inside this system. The following section provides a guided breakdown of every topic this documentation covers, and how it connects to your workflow.
+</FloatInLeft>
+
+---
+
+<FloatInWhenVisible>
+## 📚 What You’ll Find in This Section
+</FloatInWhenVisible>
+
+<FloatInRight>
+Documentation isn’t helpful if it’s fragmented. That’s why Cumulus structures its content by **atomic to systemic logic flow**. You’ll start with **Design Tokens**, the base layer for spacing, color, and interaction. Then you’ll explore **Component Structure**, the UI building blocks formed from those tokens. From there, you’ll dive into maturity systems, contribution rules, and real-world implementation.
+</FloatInRight>
+
+<CloudBulletList
+  items={[
+    '🎨 Design Tokens – Your visual atoms, systematized.',
+    '📦 Component Structure – Anatomy, states, and rationale.',
+    '🧪 Versioning Strategy – Track evolution and maturity.',
+    '📝 Contribution Guide – Define how knowledge stays fresh.',
+    '♿ Accessibility – Make inclusive decisions by default.',
+    '🎯 Style Rules – Elevate clarity across UIs.',
+    '🔐 Auth & Permissions – Govern sensitive content confidently.',
+    '🚀 Onboarding – Start strong and aligned from Day 1.',
+  ]}
+/>
+<AnimatedFigureCaption>Figure 3. Each item in the Knowledge Base builds on the last, creating continuity, not chaos.</AnimatedFigureCaption>
+
+<FloatInLeft>
+Each page is **layered for clarity**. You’ll find long-form context paragraphs, callout boxes, inline tooltips, and visual cues designed to mirror the system logic you already use in Figma and Storybook. From naming rules to governance decisions, everything ties back to the source of truth.
+</FloatInLeft>
+
+<FloatInRight>
+This structure is meant to eliminate friction, reduce context switching, and provide instant understanding. No page lives in isolation, everything is linked, explained, and version-aware.
+</FloatInRight>
+
+---
+
+<CloudFigure
+  imageSrc="/cumulus-ui-library/img/operating-system-analogy.png"
+  caption={<AnimatedFigureCaption>Figure 4. Cumulus acts like a design system OS, governing tokens, structure, and decision flow with reliability.</AnimatedFigureCaption>}
+/>
+
+<FloatInLeft>
+Operating systems manage memory, processes, and structure. Cumulus does the same for design decisions. Whether defining token inheritance or mapping accessibility attributes to component tiers, this system doesn’t just _store_ rules, it _enforces_ them. Think of it as a **governance engine** wrapped in clarity.
+</FloatInLeft>
+
+<FloatInRight>
+This is not a wiki. It’s a **living protocol**, version-controlled, interconnected, and contributor-first. With the OS analogy in mind, you’ll start to notice patterns of allocation, permission, and optimization embedded in every page you visit.
+</FloatInRight>
+
+---
+
+<FloatInWhenVisible>
+## 🔄 Why This Is Different
+</FloatInWhenVisible>
+
+<FloatInLeft>
+Cumulus makes the shift from **docs as content** to **docs as infrastructure**. That means your documentation isn’t a passive archive, it evolves with the product. Whether a spacing token is deprecated or a component is renamed, the knowledge base adapts. Every entry is grounded in your actual design system’s structure, not a parallel narrative.
+</FloatInLeft>
+
+<FloatInRight>
+This future-proofing is what sets Cumulus apart. Terms link to definitions, decisions link to dates, and every figure is placed with intentional context. Contributors don’t just add paragraphs, they contribute to the **system’s nervous system**. Documentation becomes a UI layer of its own.
+</FloatInRight>
+
+<CloudNoteBox>
+Want to contribute or improve something? Every page has editable source logic and version awareness. 
+See the [Contribution Guide](/knowledge-base/contribution-guide).
+</CloudNoteBox>
+<AnimatedFigureCaption>Figure 5. Contribution guidelines embedded in every corner, with governance in mind.</AnimatedFigureCaption>
+
+<FloatInLeft>
+By documenting your components _as you evolve them_, your system stops leaking clarity. This isn't about one-time handoffs, it’s about continuous participation and shared logic.
+</FloatInLeft>
+
+<FloatInRight>
+What used to be “tribal knowledge” now becomes **distributed expertise**, transparent, versioned, and respected.
+</FloatInRight>
+
+---
+
+<FloatInWhenVisible>
+## ✨ Recap and What’s Next
+</FloatInWhenVisible>
+
+<FloatInLeft>
+You’ve just stepped into a documentation environment built to scale, not just in size, but in clarity, utility, and contributor value. From system thinking to onboarding logic, every word and pattern here reflects our shared design truth.
+</FloatInLeft>
+
+<FloatInRight>
+This isn’t a walkthrough, it’s an invitation. Explore, contribute, and improve. Start where systems begin, **Design Tokens**. The next section will walk you through how tokens power the rest of Cumulus, visually, semantically, and structurally.
+</FloatInRight>
+
+<FloatInLeft>
+The power of this Knowledge Base isn’t in its length, it’s in its structure. Each topic builds upon the last, forging a continuous chain of logic. This means that even if you're a new contributor, you’ll find immediate value.
+</FloatInLeft>
+
+<FloatInRight>
+Whether you're an engineer mapping component states, a designer defining spacing tokens, or a writer contributing callouts, this system adapts to your workflow. It empowers you to act decisively with context.
+</FloatInRight>
+
+<FloatInLeft>
+So now that the overview is complete, begin at the atomic level. Understand the variables that govern your UI. Learn how colors, spacing, and motion interact. Dive into **Design Tokens** and lay the groundwork for everything that follows.
+</FloatInLeft>
+
+<CloudCTA
+  title="Explore the Docs, Build the Future"
+  subtitle="Design systems only scale when knowledge is shareable. Let Cumulus guide the way."
+  buttonText="Start with Design Tokens"
+  buttonLink="/knowledge-base/design-tokens"
+/>
+<AnimatedFigureCaption>Figure 6. A CTA to begin your system journey at the token level, the DNA of scalable design.</AnimatedFigureCaption>

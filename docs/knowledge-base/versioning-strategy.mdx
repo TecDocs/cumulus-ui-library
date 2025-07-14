@@ -1,3 +1,196 @@
-# 🗂️ Versioning Strategy
+---
+id: versioning-strategy
+slug: /knowledge-base/versioning-strategy
+title: "🗂️ Versioning Strategy"
+sidebar_label: "🗂️ Versioning Strategy"
+---
 
-Major, minor, and patch update guidance.
+import {
+  FloatInLeft,
+  FloatInRight,
+  FloatInPlace,
+  VersionTimelineCloud,
+  DeprecationExampleCloud,
+  CloudVersioningDiagram,
+  CloudNoteBox,
+  AnimatedFigureCaption,
+  TokenBranchCloud,
+  CloudGlowCard,
+  TokenDNALineage,
+  AnimatedLifecycleFlow,
+  CalloutBox,
+  VersionSwitcherToggle
+} from '@site/src/components/KnowledgeBaseComps';
+
+<FloatInPlace>
+# 🗂️ Versioning Strategy
+</FloatInPlace>
+
+---
+
+## 🌐 Why Versioning Exists in Design Systems
+
+<CloudGlowCard>
+Versioning is the **governance layer of your design system**. It controls how updates are introduced, how changes cascade, and how teams avoid regressions. Without it, even small improvements can break trust, introduce chaos, and fracture platform consistency.
+</CloudGlowCard>
+
+<FloatInLeft>
+Most design systems begin as tools—but the moment they’re adopted across platforms, brands, and teams, they become infrastructure. And infrastructure needs version control. Whether you’re updating a token, shipping a component variant, or rolling out a new theme, your system needs to answer: “What changed? Is it safe? What’s the fallback?”
+</FloatInLeft>
+
+<FloatInRight>
+That’s where versioning becomes critical. It provides shared language between creators and consumers of the system. It enables controlled rollout of ideas. And most importantly, it **prevents drift**, the slow divergence of design intention from product reality. As your system scales, so too must your ability to guide change across it.
+</FloatInRight>
+
+---
+
+## 📚 Semantic Versioning (and Why It Works)
+
+<FloatInLeft>
+The standard most design systems adopt is **semantic versioning**—breaking down releases into `major`, `minor`, and `patch`. But semantic versioning is more than a number. It’s a commitment. Each segment signals a different type of relationship to risk, stability, and consumer action.
+</FloatInLeft>
+
+<CalloutBox type="tip" emoji="📌">
+- **Major** = Breaking changes (e.g., removed tokens or component behavior shifts)  
+- **Minor** = Backward-compatible improvements (e.g., added token or new optional prop)  
+- **Patch** = Bugfixes or cosmetic alignment tweaks (e.g., corrected spacing token name)
+</CalloutBox>
+
+<FloatInRight>
+Semantic clarity allows teams to communicate intent—not just what changed, but why. That’s especially important in design systems, where the impact of a change might be invisible in code, but highly visible in UI. A minor change in border-radius could affect dozens of visual surfaces.
+</FloatInRight>
+
+---
+
+## 🔄 Understanding the Full Token Lifecycle
+
+<FloatInLeft>
+Now let’s look at how a token matures through its lifecycle. From creation to retirement, each phase should be visible, trackable, and reversible if needed. Tokens are too foundational to be changed casually—they’re the DNA of every component.
+</FloatInLeft>
+
+<AnimatedLifecycleFlow
+  steps={[
+    'Define Token',
+    'Release Token',
+    'Token Used in Components',
+    'Token Overridden in Theme',
+    'Token Updated',
+    'Token Deprecated',
+    'Token Retired'
+  ]}
+/>
+<AnimatedFigureCaption>Figure 1. A dynamic, animated lifecycle flow of token versions across releases.</AnimatedFigureCaption>
+
+<FloatInRight>
+Visualizing the lifecycle helps teams understand impact. For example, updating a token without knowing its theme override or fallback reference can cause unintended ripple effects. Lifecycle modeling reduces this risk—and encourages confidence in change management.
+</FloatInRight>
+
+---
+
+## 🧬 Tracing Token Evolution with DNA Lineage
+
+<FloatInLeft>
+Tokens don’t just exist. They evolve. Over time, their names may change, their values may shift, or their purposes may be split into variants. Tracking that lineage is key to governance. Think of it like a versioned family tree for design logic.
+</FloatInLeft>
+
+<TokenDNALineage tokens={[
+  '--color-brand-primary',
+  '--color-brand-primary-v2',
+  '--color-brand-accent',
+  '--color-brand-accent-muted',
+  '--color-theme-dark-accent',
+  '--color-theme-dark-accent-v2'
+]} />
+<AnimatedFigureCaption>Figure 2. Token DNA lineage tracing origins, mutations, and replacements across releases.</AnimatedFigureCaption>
+
+<FloatInRight>
+This view helps avoid reuse of deprecated values, clarifies upgrade paths, and supports tooling that can automate token audits. Instead of asking “what happened to that old brand color?”, you follow the lineage through documented evolution.
+</FloatInRight>
+
+---
+
+## 🛑 Deprecation as Strategy, Not Afterthought
+
+<DeprecationExampleCloud />
+<AnimatedFigureCaption>Figure 3. A deprecated token visually phased out while a modern alias replaces it.</AnimatedFigureCaption>
+
+<CalloutBox type="deprecated" emoji="❌">
+Deprecation is an intentional phase—not a passive removal. The system should mark the token, gray out previews, document the replacement, and log its deprecation date.
+</CalloutBox>
+
+<FloatInRight>
+By pairing this with warnings in linters and migration scripts, you turn deprecation into an educational moment. Teams learn not just what changed, but why it changed—and what they should do next.
+</FloatInRight>
+
+---
+
+## 🧱 How Versioning Cascades Across Layers
+
+<FloatInLeft>
+Versioning doesn’t stop at tokens. It extends to **components**, which consume those tokens, and to **themes**, which override or remix them. This layered structure is what allows a system to scale across brands, platforms, and accessibility profiles.
+</FloatInLeft>
+
+<CloudVersioningDiagram />
+<AnimatedFigureCaption>Figure 4. How versioning logic operates at multiple levels — tokens, component layers, and theme contracts.</AnimatedFigureCaption>
+
+<FloatInRight>
+By versioning each layer independently, you reduce risk. You can launch a new theme while keeping components unchanged. Or refactor a component while preserving token structure. It’s about isolating changes while maintaining connection.
+</FloatInRight>
+
+---
+
+## 🌱 Branching and Forking Token Paths
+
+<TokenBranchCloud />
+<AnimatedFigureCaption>Figure 5. A branching lineage of token replacements with glow indicators and hover states.</AnimatedFigureCaption>
+
+<FloatInLeft>
+When tokens evolve, they don’t always replace each other one-to-one. Sometimes they branch—introducing mobile-specific values, dark mode variants, or accessibility overrides. Branching visualizations prevent duplication and misalignment by showing intent.
+</FloatInLeft>
+
+---
+
+## 🔄 Comparing Legacy vs Updated Variants
+
+<VersionSwitcherToggle />
+<AnimatedFigureCaption>Figure 6. Interactive version switcher displaying differences between legacy and updated variants.</AnimatedFigureCaption>
+
+<FloatInRight>
+Showing before-and-after deltas is critical when onboarding new teams or migrating older surfaces. A version switcher makes change visible, encouraging adoption by reducing ambiguity.
+</FloatInRight>
+
+---
+
+## 🛡️ Building Trust Through Change
+
+<FloatInLeft>
+Ultimately, versioning builds **psychological safety**. Contributors know their updates won’t cause regressions. Designers can test ideas in branches. Product owners can communicate timelines. And consumers trust that UI changes are deliberate—not accidental.
+</FloatInLeft>
+
+<CloudNoteBox>
+A successful system doesn’t just release changes—it earns buy-in. Versioning is how you scale improvements without scaling risk.
+</CloudNoteBox>
+
+---
+
+## 📈 Monitoring and Governance
+
+<FloatInRight>
+As your system grows, versioning should integrate with **dashboards, audits, and alerts**. Flag when a deprecated token is still in use. Warn if a new theme doesn’t inherit from the current base. Governance isn’t bureaucracy—it’s enablement.
+</FloatInRight>
+
+---
+
+## ✅ Recap and What’s Next
+
+<FloatInLeft>
+Versioning is more than a release process. It’s the **protocol for evolution**. You’ve now seen how tokens, components, and themes can be independently versioned, visually mapped, and logically governed to support system growth without regressions.
+</FloatInLeft>
+
+<FloatInRight>
+From semantic rules to branching trees, from lifecycle flows to deprecation states, you now have the mental model needed to introduce changes safely and confidently. Your system isn’t static—it’s always evolving. Versioning makes that evolution sustainable.
+</FloatInRight>
+
+<FloatInLeft>
+In the next section, we’ll introduce the <strong>Contribution Guide</strong>—the operational manual that ensures anyone can add to this system without breaking it. You’ll learn the structure of component contributions, documentation standards, and how versioning ties directly into pull request reviews.
+</FloatInLeft>

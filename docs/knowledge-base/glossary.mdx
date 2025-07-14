@@ -1,3 +1,136 @@
-# 📚 Glossary
+---
+id: glossary
+slug: /knowledge-base/glossary
+title: " "
+sidebar_label: "📚 Glossary"
+---
 
-All important terms and acronyms.
+import {
+  FloatInPlace,
+  FloatInLeft,
+  FloatInRight,
+  GlossaryCloudTerm
+} from '@site/src/components/KnowledgeBaseComps';
+
+<FloatInPlace>📚 Cumulus UI Library: Complete Glossary</FloatInPlace>
+
+<FloatInLeft>
+Welcome to the official Cumulus UI **Glossary**, your single source of truth for every reusable term, token, and structural pattern in the system. Whether you're a designer, engineer, PM, or contributor, this list ensures we're all speaking the same language.
+</FloatInLeft>
+
+<FloatInRight>
+Terms are grouped by relevance, and definitions include usage context and clarity principles. Every entry below was selected based on frequency across all knowledge base pages, meaning these are the words that matter most in practice.
+</FloatInRight>
+
+<GlossaryCloudTerm title="Cumulus">
+A **cloud-native internal design system and documentation framework** built for clarity, structure, and collaboration. Cumulus provides consistent tokens, components, and contribution workflows across distributed teams.
+</GlossaryCloudTerm>
+
+<GlossaryCloudTerm title="Design Token">
+A **reusable value**—such as a color, spacing unit, or font size—used to maintain visual consistency across a system. Tokens abstract hardcoded values into meaningful, centrally managed variables.
+</GlossaryCloudTerm>
+
+<GlossaryCloudTerm title="Component">
+A **self-contained UI element** (e.g., button, badge, modal) that follows design system logic. Components in Cumulus are theme-aware, token-aligned, and accessible.
+</GlossaryCloudTerm>
+
+<GlossaryCloudTerm title="Logic">
+The **underlying behavior or rules** that govern how components, permissions, tokens, or states interact across the system.
+</GlossaryCloudTerm>
+
+<GlossaryCloudTerm title="Onboarding">
+The process of **introducing new contributors** to the system. Cumulus onboarding is role-based, visual, and guided by interactive checklists, pathways, and live component previews.
+</GlossaryCloudTerm>
+
+<GlossaryCloudTerm title="Spacing">
+Refers to the **consistent use of margins, paddings, and grid gaps** defined via tokens. Spacing rules ensure layout rhythm and visual breathing room.
+</GlossaryCloudTerm>
+
+<GlossaryCloudTerm title="States">
+Interactive or system-driven **variations in a component’s appearance** (e.g., hover, active, disabled). State behavior must be predictable and token-aligned.
+</GlossaryCloudTerm>
+
+<GlossaryCloudTerm title="Accessibility">
+Ensures that the system is **usable by people with disabilities**. This includes color contrast, keyboard navigation, ARIA roles, and WCAG compliance baked into all tokens and components.
+</GlossaryCloudTerm>
+
+<GlossaryCloudTerm title="Clarity">
+A principle that guides all system content and visuals—**clear naming, clear boundaries, and minimal cognitive load**.
+</GlossaryCloudTerm>
+
+<GlossaryCloudTerm title="Contribution">
+The act of **adding or refining** parts of the design system. Contributions are tracked, reviewed, and tagged by persona, scope, and type using Cumulus workflows.
+</GlossaryCloudTerm>
+
+<GlossaryCloudTerm title="Structure">
+The **information and component hierarchy** across the documentation and design tokens—how rules, patterns, and decisions are grouped and revealed.
+</GlossaryCloudTerm>
+
+<GlossaryCloudTerm title="Documentation">
+The written, visual, and interactive materials that explain how to **use, contribute to, and maintain** the design system.
+</GlossaryCloudTerm>
+
+<GlossaryCloudTerm title="System">
+The **collection of rules, components, tokens, and principles** that together form a scalable and maintainable design language.
+</GlossaryCloudTerm>
+
+<GlossaryCloudTerm title="Visual">
+Refers to any **UI property or decision** that affects what a user sees—color, typography, layout, spacing, shadows, and transitions.
+</GlossaryCloudTerm>
+
+<GlossaryCloudTerm title="Access">
+Controls what a user **can see or interact with** in the system. Tied to roles, permissions, and gated UI states.
+</GlossaryCloudTerm>
+
+<GlossaryCloudTerm title="Team">
+A working group of contributors aligned by purpose (e.g., engineering, design, PM). Cumulus supports asynchronous, distributed team contribution.
+</GlossaryCloudTerm>
+
+<GlossaryCloudTerm title="Rules">
+Defined **guidelines for layout, behavior, or contribution**. Rules keep systems consistent, predictable, and enforceable.
+</GlossaryCloudTerm>
+
+<GlossaryCloudTerm title="Values">
+The **actual numbers or strings** associated with tokens (e.g., `#3F8CFF` or `1.5rem`). Values are abstracted by naming conventions to ensure reusability and scalability.
+</GlossaryCloudTerm>
+
+<GlossaryCloudTerm title="Elevation">
+The **perceived layering or depth** of components using shadows or z-index. In Cumulus, elevation tokens are used to establish UI hierarchy, especially in modals, dropdowns, and floating panels.
+</GlossaryCloudTerm>
+
+<GlossaryCloudTerm title="Theme Mode">
+Defines the **color environment**—usually light or dark—in which the system is rendered. Cumulus supports dynamic theme switching with token variants for each mode.
+</GlossaryCloudTerm>
+
+<GlossaryCloudTerm title="RBAC">
+Short for **Role-Based Access Control**, a permissions framework used to determine what features or content a user can interact with based on their assigned role.
+</GlossaryCloudTerm>
+
+<GlossaryCloudTerm title="Semantic Token">
+A **design token with meaning**, like `--color-success` or `--spacing-content`, abstracted from raw values. They help maintain context-aware design consistency.
+</GlossaryCloudTerm>
+
+<GlossaryCloudTerm title="Audit Trail">
+A **history of system events** (like role changes or component updates) that allows for traceability and accountability across contributions and access control decisions.
+</GlossaryCloudTerm>
+
+<GlossaryCloudTerm title="Interaction Pattern">
+A **repeatable user flow** or component behavior used consistently throughout the system—such as form validation, hover states, or toggle groups.
+</GlossaryCloudTerm>
+
+<GlossaryCloudTerm title="Versioning">
+The act of **tracking changes to system components, tokens, or docs** using semver principles. Cumulus uses a visual versioning approach for clarity and rollback safety.
+</GlossaryCloudTerm>
+
+<GlossaryCloudTerm title="Contribution Persona">
+A contributor **archetype** (e.g., Designer, Engineer, QA, PM) used to guide how documentation, workflows, and review processes are structured.
+</GlossaryCloudTerm>
+
+<GlossaryCloudTerm title="Fallback State">
+A **default UI or behavior shown when a feature is gated, inaccessible, or fails to load**. Ensures graceful degradation and better UX.
+</GlossaryCloudTerm>
+
+<GlossaryCloudTerm title="Drift">
+The **gradual misalignment** of components, tokens, or rules from system standards—often due to unchecked contributions or unclear documentation.
+</GlossaryCloudTerm>
+
