@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 import Link from '@docusaurus/Link';
 
 const cards = [
-  {
+ {
     title: '📚 Storybook Components',
     description: 'Reusable stories for every state, theme, and edge case.',
-    to: '/docs/storybook/overview',
+    to: '/docs/storybook-components', // ✅ fix this
   },
   {
     title: '📓 Confluence Integration',

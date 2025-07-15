@@ -1,1 +1,0 @@
-// Placeholder for CloudA11yContrast.jsx

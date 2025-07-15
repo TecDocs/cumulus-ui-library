@@ -10,7 +10,7 @@ module.exports = {
       label: '📚 Storybook Components',
       collapsed: false,
       items: [
-        'storybook/overview',
+        'storybook/storybook-components',
       ],
     },
     {
