@@ -18,9 +18,9 @@ module.exports = {
       label: '📓 Confluence Integration',
       collapsed: false,
       items: [
-        'confluence/overview',
-        'confluence/connected-docs',
+        'confluence/confluence-sops',
         'confluence/approval-flows',
+        'confluence/connected-docs',
       ],
     },
     {

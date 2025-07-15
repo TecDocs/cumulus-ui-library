@@ -12,7 +12,7 @@ const cards = [
   {
     title: '📓 Confluence Integration',
     description: 'Workflows, approval flows, and real-time connected docs.',
-    to: '/docs/confluence/overview',
+    to: '/docs/confluence/confluence-sops',
   },
   {
     title: '🛡️ Compliance & PDF Exports',

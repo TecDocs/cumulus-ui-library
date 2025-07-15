@@ -1,3 +1,135 @@
-# 🔗 Connected Docs
+---
+id: connected-docs
+title: "🔗 Connected Docs"
+sidebar_label: "🔗 Connected Docs"
+---
 
-How docs sync with Confluence.
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import SOPSummaryBox from '@site/src/components/ConfluenceDocsComps/SOPSummaryBox';
+import FlowDiagramEmbed from '@site/src/components/ConfluenceDocsComps/FlowDiagramEmbed';
+import ExpandBoxCloud from '@site/src/components/ConfluenceDocsComps/ExpandBoxCloud';
+import CloudStepList from '@site/src/components/ConfluenceDocsComps/CloudStepList';
+import { FloatInPlace, FloatInLeft, FloatInRight, CloudBulletList } from '@site/src/components/KnowledgeBaseComps';
+
+<FloatInPlace>
+# 🔗 Connected Docs
+</FloatInPlace>
+
+<FloatInLeft>
+Once a component successfully navigates the Approval Flows, the next challenge is keeping its documentation accurate and synchronized across every platform your team depends on. This is where **Connected Docs** come in. Rather than letting details live in isolated silos, you create a single source of truth that updates everywhere it is referenced.
+</FloatInLeft>
+
+<FloatInRight>
+The Cumulus UI Library uses Connected Docs to ensure that Confluence, Storybook, and MDX‑based Knowledge Base entries all reflect the same component reality. Updates to a component’s structure or tokens are not left behind in stale pages. Instead, contributors follow a process that propagates updates so everyone stays aligned and informed.
+</FloatInRight>
+
+---
+
+## Visualizing Connected Docs
+
+<FlowDiagramEmbed
+  image={useBaseUrl('/img/confluence-integrated-docs.png')}
+  alt="Confluence Integrated Docs"
+  caption="Figure 1. Confluence-integrated view that anchors the system and ensures each step aligns with live documentation."
+/>
+
+<FloatInLeft>
+The first image shows the Confluence integrated view. This is where contributors often start, reviewing live details that feed into other parts of the documentation ecosystem. It demonstrates how Confluence acts as a base reference that teams trust when making changes.
+</FloatInLeft>
+
+<FloatInRight>
+By integrating Confluence with other platforms, teams avoid discrepancies between what is documented and what is actually implemented. This creates a reliable central hub where contributors and reviewers alike can verify information quickly and confidently.
+</FloatInRight>
+
+---
+
+<FlowDiagramEmbed
+  image={useBaseUrl('/img/connecteddocs-icon.png')}
+  alt="Connected Docs Icon"
+  caption="Figure 2. Connected Docs concept showing linked documentation sources working together as a synchronized network."
+/>
+
+<FloatInLeft>
+While the first figure shows the system anchored in Confluence, the second shifts focus to how those sources interconnect across platforms—Confluence, Storybook, and MadCap Flare—joined by soft, flowing links. This visual reinforces the idea that documentation is not isolated. Each platform is part of a synchronized network.
+</FloatInLeft>
+
+<FloatInRight>
+Presenting these icons together highlights that updates are not local changes; they ripple across every integrated channel. Contributors can be confident that their efforts in one place will be reflected everywhere else users might look, ensuring clarity at scale.
+</FloatInRight>
+
+---
+
+## Why Connected Docs Matter
+
+<CloudBulletList
+  items={[
+    "Prevent drift by synchronizing updates between Confluence, Storybook, and MDX",
+    "Reduce duplicate effort by linking documentation sources rather than recreating them",
+    "Increase trust in the Knowledge Base by ensuring every entry stays current",
+    "Empower reviewers and new contributors with accurate context at all times",
+    "Support scalability by maintaining clarity as the library grows"
+  ]}
+/>
+
+<FloatInLeft>
+Each of these benefits builds on the foundation laid by your Approval Flows. Without Connected Docs, even approved components can fall victim to confusion if one system reflects outdated rules or visuals. A single source of truth means every team member has confidence in the information they reference every day.
+</FloatInLeft>
+
+<FloatInRight>
+Connected Docs also make onboarding faster and safer. New contributors know exactly where to find verified information. Reviewers can validate decisions without digging through multiple systems. Leads can oversee change history without toggling between disconnected platforms. This workflow saves time and prevents errors.
+</FloatInRight>
+
+---
+
+## Quick Reference Steps
+
+<CloudStepList
+  steps={[
+    "Verify that your component is fully approved before syncing documentation",
+    "Update your Confluence entry with final details and links to Storybook",
+    "Refresh any MDX pages to reflect the latest tokens and patterns",
+    "Cross-check visual references to ensure accuracy and consistency",
+    "Revisit these connections regularly as components evolve",
+    "Document lessons learned to refine future updates and improve team workflows"
+  ]}
+/>
+
+<ExpandBoxCloud title="Why This Matters">
+  Connected Docs are the bridge between approval and adoption. They ensure that every user of the design system—whether reading in Confluence, browsing Storybook, or learning through MDX—receives the same accurate guidance. This unified approach transforms documentation from static files into a living, trusted knowledge network.
+</ExpandBoxCloud>
+
+---
+
+## Recap
+
+<FloatInLeft>
+The Connected Docs page is more than a workflow description. It is a commitment to maintain alignment across every documentation surface. When you follow these practices, you prevent drift and confusion, empowering your entire team with clarity and consistency.
+</FloatInLeft>
+
+<FloatInRight>
+By integrating documentation rather than duplicating it, you reduce maintenance costs and ensure that your design system remains a trusted resource. As you apply these practices, remember that Connected Docs is not a one‑time setup but an ongoing discipline that rewards attention and collaboration as the system grows.
+</FloatInRight>
+
+<SOPSummaryBox
+  owner="Joshua Schoen"
+  location="Cumulus-UI-Library/Confluence/connected-docs"
+  lastReviewed="July 15, 2025"
+  purpose="Describe how to keep component documentation synchronized across Confluence, Storybook, and MDX within the Cumulus UI Library."
+/>
+
+---
+
+## View in Confluence
+
+<FloatInLeft>
+For the complete, live version of Connected Docs with all embedded assets and comments, visit it directly in Confluence:  
+[**View Connected Docs in Confluence**](https://elizadog-1752515821843.atlassian.net/wiki/external/YjFhMWYyZjRjNGQwNDg1Yjk2M2FlN2VhNzA5YjkwYjU)
+</FloatInLeft>
+
+---
+
+## What’s Next
+
+<FloatInRight>
+You have now completed the Confluence SOP series. The next step is to apply these practices as you contribute new components, ensuring that every change follows Approval Flows and stays aligned through Connected Docs. By doing this, you help maintain a system that remains clear, reliable, and scalable for everyone.
+</FloatInRight>

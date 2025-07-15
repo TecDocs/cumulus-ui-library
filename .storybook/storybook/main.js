@@ -4,7 +4,10 @@ import svgr from 'vite-plugin-svgr';
 
 export default {
   framework: '@storybook/react-vite',
-  stories: ['../storybook/**/*.stories.@(js|jsx|ts|tsx)'], // ✅ Custom Storybook folder
+  stories: [
+    // ✅ Go up one folder from .storybook, then into src/components
+    '../src/components/**/*.stories.@(js|jsx|ts|tsx)'
+  ],
   addons: ['@storybook/addon-essentials', '@storybook/addon-themes'],
   async viteFinal(config) {
     return mergeConfig(config, {
