@@ -31,7 +31,7 @@ export default function Navbar() {
     {
       href: 'https://substack.com/@tecdocs',
       label: 'Substack',
-      icon: 'substack.svg',
+      icon: 'Substack.svg',
     },
   ];
 
