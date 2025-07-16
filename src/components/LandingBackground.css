@@ -1,0 +1,44 @@
+/* Light mode background */
+.sky-light {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom, #cce7ff 0%, #e6f4ff 100%);
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Dark mode background (already good but feel free to tweak) */
+.sky-dark {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom, #000000 0%, #0a0a0a 100%);
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Optional: floating clouds in light mode */
+.sky-light::before,
+.sky-light::after {
+  content: '';
+  position: absolute;
+  background: url('/img/cloud.svg') repeat-x; /* use your cloud SVG in /static/img */
+  width: 300%;
+  height: 200px;
+  top: 100px;
+  left: -100px;
+  opacity: 0.3;
+  animation: floatClouds 60s linear infinite;
+}
+
+.sky-light::after {
+  top: 300px;
+  animation-duration: 90s;
+  opacity: 0.2;
+}
+
+@keyframes floatClouds {
+  from { transform: translateX(0); }
+  to { transform: translateX(-33%); }
+}
