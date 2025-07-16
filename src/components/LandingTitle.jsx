@@ -17,7 +17,7 @@ const cards = [
   {
     title: '🛡️ Compliance & PDF Exports',
     description: 'Templates and exports for audit and legal compliance.',
-    to: '/docs/compliance/overview',
+    to: '/docs/compliance/compliance-overview',
   },
   {
     title: '📘 Knowledge Base',

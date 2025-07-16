@@ -1,3 +1,193 @@
-# 📄 Compliance Overview
+---
+id: compliance-overview
+slug: /compliance/compliance-overview
+title: "📄 Compliance Overview"
+sidebar_label: "📄 Compliance Overview"
+---
 
-Introduction to PDF exports and compliance.
+import { FloatInPlace, FloatInLeft, FloatInRight, AnimatedFigureCaption, CloudBulletList } from '@site/src/components/KnowledgeBaseComps';
+import PDFTemplateCardGrid from '@site/src/components/PDFComplianceComps/PDFTemplateCardGrid';
+import ExportWorkflowStepper from '@site/src/components/PDFComplianceComps/ExportWorkflowStepper';
+import VariableConditionViewer from '@site/src/components/PDFComplianceComps/VariableConditionViewer';
+import TargetOutputSelector from '@site/src/components/PDFComplianceComps/TargetOutputSelector';
+import ConditionTagPreview from '@site/src/components/PDFComplianceComps/ConditionTagPreview';
+import SnippetReuseViewer from '@site/src/components/PDFComplianceComps/SnippetReuseViewer';
+
+<FloatInPlace>
+# 📄 Compliance Overview
+</FloatInPlace>
+
+<FloatInLeft>
+**This section provides a detailed exploration of compliance workflows and export management within a modern documentation system.**  
+It lays out the foundational concepts, provides rich context for each step, and shows why each principle is critical in a real enterprise environment. Every component that follows is visually interactive and conceptually tied to a single source workflow approach.
+</FloatInLeft>
+
+<CloudBulletList
+  items={[
+    "Built to simulate a MadCap Flare environment without requiring a license",
+    "Demonstrates real techniques for scalable and auditable documentation",
+    "Every section transitions into the next for a seamless learning experience"
+  ]}
+/>
+
+<FloatInRight>
+The purpose here is to demonstrate how **structured authoring**, **workflow management**, **content reuse**, and **conditional delivery** work together.  
+Each figure below has been styled for accessibility and clarity in both light and dark themes. Captions under each figure set up the next topic so the reading path feels natural.
+</FloatInRight>
+
+<FloatInLeft>
+At scale, a single missing watermark or misplaced variable can lead to compliance failures. For example, a global SaaS provider once discovered that thousands of customer contracts lacked confidentiality tags, forcing a costly recall. These failures are avoidable with the right templates and workflows in place.
+</FloatInLeft>
+
+<FloatInRight>
+In a large company, documentation often flows through writers, designers, engineers, and compliance officers. Without a unified system, content can quickly drift from standards. The practices outlined in this section show how to anchor every export in a single, trustworthy process.
+</FloatInRight>
+
+<FloatInLeft>
+Consider the perspective of a technical program manager at a FAANG company. They may oversee dozens of writers across product lines. A shared compliance workflow ensures that every deliverable, from a regulatory PDF to an onboarding guide, meets the same strict quality and legal criteria without last minute rewrites.
+</FloatInLeft>
+
+---
+
+## Authoring and Managing Templates
+
+<FloatInLeft>
+**Templates** are the first step in creating a predictable and repeatable authoring environment. They serve as a starting point for every new document and reduce the time it takes to set up a compliant structure. These templates carry embedded rules that ensure headings, metadata, and structural sections are always aligned with regulatory requirements. When teams adopt templates, they invest in long term efficiency and scalability.
+</FloatInLeft>
+
+<FloatInRight>
+Templates function as a contract between writers and design standards. Instead of starting from scratch, authors select from a set of pre-approved building blocks. This prevents layout drift, ensures consistent branding, and creates a foundation for accurate output generation.
+</FloatInRight>
+
+###  Why Templates Matter
+
+<FloatInLeft>
+At companies like Amazon, a documentation specialist might start every new regulatory document with a **Policy Template** to ensure no metadata is missed. These structures save hours of rework and provide a baseline everyone trusts. Below you can see template cards that pulse softly to indicate interactivity, each one representing a different use case in a production workflow.
+</FloatInLeft>
+
+<PDFTemplateCardGrid templates={[
+  {title: "Policy Template", description: "Layouts with embedded headers and metadata for audits."},
+  {title: "Guide Template", description: "Step based layouts for instructional content."},
+  {title: "Audit Template", description: "Prebuilt sections ensuring compliance ready formatting."}
+]} />
+
+<AnimatedFigureCaption>
+Figure 1. Template cards illustrate reusable structures that accelerate authoring and support compliance from the start, for example a financial team can instantly pick an audit template and know it meets regional regulatory rules.
+</AnimatedFigureCaption>
+
+---
+
+## Understanding Export Workflows
+
+<FloatInRight>
+**Workflows** control how documents evolve from initial draft to final deliverable. Each step adds oversight and validation. Authors begin with drafting, reviewers check for compliance and accuracy, and approvers confirm readiness for release.
+</FloatInRight>
+
+<FloatInLeft>
+###  How Workflow Stages Are Used
+Below is a workflow component that animates each stage. Hover effects highlight the active step so teams can see exactly where a document sits in the process. A content program manager or QA lead would use views like this to verify approvals in real time, ensuring no step is skipped.
+</FloatInLeft>
+
+<ExportWorkflowStepper steps={["Draft Creation","Compliance Review","Final Export"]} />
+
+<AnimatedFigureCaption>
+Figure 2. Workflow stages demonstrate how oversight is built into every phase of the publishing process, for example a legal team can visually confirm that compliance review is complete before sign off.
+</AnimatedFigureCaption>
+
+<FloatInLeft>
+Workflows integrate naturally with templates. Once a template is chosen, it moves through these checkpoints to gain approvals and meet compliance gates before release.
+</FloatInLeft>
+
+---
+
+## Applying Variables and Conditions
+
+<FloatInLeft>
+**Variables** are placeholders that update everywhere at once, saving time and preventing mistakes. **Conditions** allow you to include or exclude sections depending on the audience or output type. Together they enable one document to serve multiple needs without redundancy.
+</FloatInLeft>
+
+<FloatInRight>
+###  Internal vs External Outputs
+In the component below you can toggle between internal and external outputs. Watch how product labels and instructions adapt seamlessly, showing the power of these mechanisms in delivering the right information to the right audience.
+</FloatInRight>
+
+<VariableConditionViewer variableText="Dynamic Product Label" internalOutput="Internal build shows engineering details and deeper instructions." externalOutput="External build shows clean customer friendly guidance only." />
+
+<AnimatedFigureCaption>
+Figure 3. Variables and conditions let you maintain one source while adapting messaging for each target audience, for example engineering notes stay hidden when generating a customer facing PDF.
+</AnimatedFigureCaption>
+
+<FloatInLeft>
+In real scenarios, an engineering template might include a confidential debug section while the public PDF hides it. These tools make that separation effortless and safe.
+</FloatInLeft>
+
+---
+
+## Previewing with Conditional Tags
+
+<FloatInRight>
+Beyond simple variables, conditional tags add further control. They help safeguard sensitive data and ensure internal details never appear in external documents.
+</FloatInRight>
+
+<FloatInLeft>
+###  Why Previews Are Critical
+The next component demonstrates how easy it is to preview and validate these conditions before publishing. Teams in finance or healthcare rely on previews like this to avoid compliance violations.
+</FloatInLeft>
+
+<ConditionTagPreview />
+
+<AnimatedFigureCaption>
+Figure 4. Conditional previews confirm exactly what different audiences will see, for example a hospital compliance team can verify that patient identifiers are hidden in external releases.
+</AnimatedFigureCaption>
+
+<FloatInLeft>
+A single overlooked tag can lead to leaking restricted data, so these visual checks are indispensable.
+</FloatInLeft>
+
+---
+
+## Selecting Output Targets
+
+<FloatInRight>
+With adaptive content under control, the next challenge is deciding which format to publish. Modern teams often need to produce several formats from the same source, such as PDFs for regulators and HTML for responsive web.
+</FloatInRight>
+
+<FloatInLeft>
+###  Multi-Format Flexibility
+The component below shows how this selection can be done interactively. An output selector like this lets a writer quickly switch from generating a signed PDF for legal use to a Word version for internal edits.
+</FloatInLeft>
+
+<TargetOutputSelector />
+
+<AnimatedFigureCaption>
+Figure 5. Output selection demonstrates multi format publishing without requiring separate source files, for example a single product manual can be exported as a web guide and a print ready PDF in minutes.
+</AnimatedFigureCaption>
+
+---
+
+## Reusing Snippets
+
+<FloatInLeft>
+The final step in streamlining a compliant documentation workflow is content reuse. **Snippets** allow you to centralize repeated content such as disclaimers or instructional segments. Updates are then made in one place and instantly reflected wherever they are used.
+</FloatInLeft>
+
+<SnippetReuseViewer />
+
+<AnimatedFigureCaption>
+Figure 6. Snippet reuse highlights how maintenance becomes easier and errors are minimized through single sourcing, for example a global privacy policy update propagates instantly across every template.
+</AnimatedFigureCaption>
+
+<FloatInRight>
+Snippets are essential for scale. A team might update a privacy disclaimer once, and within minutes every PDF export across hundreds of products reflects the change.
+</FloatInRight>
+
+---
+
+## What's Next
+
+<FloatInLeft>
+**Next Steps:** In the next section you will explore **PDF Templates** in detail. You will learn advanced layout techniques, additional compliance strategies, and interactive approaches that turn your documentation from functional to polished and audit ready.  
+You will see how these templates link directly into export workflows, how variables and snippets combine to create a single source of truth, and how audit teams rely on these structures for sign offs.  
+You will also discover how these principles scale in real enterprise environments, for example when a global team needs to release hundreds of localized PDF guides in a single day.  
+Finally, you will explore practical ways to test and evolve templates, ensuring they remain resilient as standards change, as teams grow, and as compliance requirements evolve across different industries and regions.
+</FloatInLeft>

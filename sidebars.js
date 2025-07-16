@@ -28,7 +28,7 @@ module.exports = {
       label: '🛡️ Compliance & PDF Exports',
       collapsed: false,
       items: [
-        'compliance/overview',
+        'compliance/compliance-overview',
         'compliance/pdf-templates',
         'compliance/export-workflows',
       ],

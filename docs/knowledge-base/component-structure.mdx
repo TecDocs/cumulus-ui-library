@@ -13,7 +13,6 @@ import {
   CloudBulletList,
   ComponentAnatomyCloud,
   TokenToComponentPath,
-  CloudMoleculeStack,
   ComponentUsageExamplesCloud,
   TokenDependencyTree,
   BeforeAfterTokenDemo,
@@ -27,22 +26,26 @@ import {
 
 ---
 
-## 🌐 Token-Driven Foundations
+## Token Driven Foundations
 
 <FloatInLeft>
-In a mature design system, components are never arbitrary. They are composed like sentences from a language, made readable and expressive through the careful reuse of **semantic building blocks**. These blocks originate from design tokens, the atomic variables that represent spacing, font size, color, radius, shadow, and more. Think of each component as a molecule made from these atomic tokens. This approach allows for scalable modularity, predictable behavior, and clean design inheritance that aligns across disciplines.
+In a mature design system, components are not assembled ad hoc. They are built intentionally, following the same logic as a language where every word has meaning and every sentence follows rules. Those rules come from **design tokens**, which define spacing, color, typography, elevation, and other core styles. By constructing components from these tokens, you create a scalable foundation that is easier to maintain and evolve over time.
 </FloatInLeft>
 
 <FloatInRight>
-The benefits go beyond code reuse. Designers, developers, QA engineers, and accessibility specialists all gain a shared, inspectable contract. When tokens drive structure, everyone works from the same blueprint. Even small adjustments, like updating a color contrast variable, cascade across the entire system with confidence. Let’s begin with a breakdown of how this token-powered anatomy actually looks.
+This token driven approach ensures consistency across products and platforms. A single token value, such as spacing or border radius, can be updated centrally and immediately reflected in every component that uses it. This reduces the risk of drift, makes audits more predictable, and aligns designers and developers around the same source of truth.
 </FloatInRight>
+
+<FloatInLeft>
+If you have already reviewed the **Design Tokens** section, you have seen how these foundational variables are defined. Here, we show how those definitions flow directly into real UI components, forming the bridge between abstract values and tangible interfaces.
+</FloatInLeft>
 
 ---
 
-## 🩻 Visualizing Component Anatomy
+## Visualizing Component Anatomy
 
 <FloatInLeft>
-To understand how components derive their style and consistency, we start with anatomy. Components in a robust system are constructed intentionally from token values. Padding, margin, radius, and font sizing all stem from token-based logic, creating visual rhythm across platforms. These tokens aren't just values—they are documentation, contract, and architecture all in one.
+Components are composed of parts, each tied back to a token. Understanding this anatomy makes maintenance and iteration easier. For example, a card’s padding, corner radius, background color, and shadow all reference defined tokens rather than hardcoded values. This approach means each part of the component is traceable and intentionally governed.
 </FloatInLeft>
 
 <ComponentAnatomyCloud
@@ -55,133 +58,149 @@ To understand how components derive their style and consistency, we start with a
     { label: 'Typography', token: '--font-size-md' }
   ]}
 />
-<AnimatedFigureCaption>Figure 1. A component anatomy mapped directly to its design token sources.</AnimatedFigureCaption>
+<AnimatedFigureCaption>
+Figure 1. A card component anatomy mapped directly to token sources, showing how foundational values influence every surface.
+</AnimatedFigureCaption>
 
 <FloatInRight>
-Figure 1 outlines the anatomy of a Card component, emphasizing how design tokens serve as the connective tissue between design intention and development output. Each token maps to a specific aspect of the component’s layout or style. This allows for clear auditing, predictable overrides, and scalable theming across your UI surfaces.
+When you adjust a token, such as <code>--radius-card</code>, that change immediately propagates to all components referencing it. This ensures consistency, reduces manual edits, and makes global re‑theming or accessibility improvements far simpler.
 </FloatInRight>
 
 <FloatInLeft>
-When a token changes—such as <code>--radius-card</code>—the impact ripples across every component referencing it. This reduces the need for manual rework and unlocks the ability to theme entire sections of an interface with a single change. That alone makes token-based structure far more valuable than isolated CSS or scoped styling hacks.
+This model also provides a clear audit trail. You can look at any component and see exactly which token governs each property, making onboarding and troubleshooting much faster.
 </FloatInLeft>
 
 ---
 
-## 🔄 The Journey From Design to Code
+## From Design to Code
 
 <FloatInRight>
-The real power of component structure emerges when teams connect design tooling like Figma directly to token logic. What starts as a visual spacing value becomes a semantic token, which is then referenced in every component that needs it. This flow forms the bedrock of scalable UI development.
+Tokens create a seamless path from design to implementation. A spacing decision in a Figma file is translated into a semantic token, which is then referenced in component code and rendered in the live interface. This creates a single chain of logic rather than a series of disconnected handoffs.
 </FloatInRight>
 
 <TokenToComponentPath
   steps={[
-    'Figma defines 16px padding',
-    '--spacing-md token created',
-    'Card component references token',
-    'Live UI applies consistent spacing'
+    'Spacing value defined in design tooling',
+    'Semantic token created in your system',
+    'Component references token directly',
+    'Live interface reflects the change instantly'
   ]}
 />
-<AnimatedFigureCaption>Figure 2. The path from design intent to UI implementation through token logic.</AnimatedFigureCaption>
+<AnimatedFigureCaption>
+Figure 2. The path from design intent to implemented UI through token driven logic.
+</AnimatedFigureCaption>
 
 <FloatInLeft>
-Consistency and traceability are the outcomes of this workflow. Designers no longer hand off vague specs. Developers no longer guess at spacing values. QA no longer assumes intended behavior—they inspect tokens. This shared model leads to a system that is not only scalable, but inherently teachable and inspectable.
+This alignment removes ambiguity. Designers stop guessing how something will look in production. Developers stop interpreting specs in different ways. Quality engineers verify against tokens instead of assumptions. It is a workflow that scales without losing clarity.
 </FloatInLeft>
 
 ---
 
-## 🔗 Why Token-Driven Thinking Matters
+## Why Token Driven Thinking Matters
 
 <FloatInRight>
-Design and engineering alignment depends on shared vocabulary. Tokens **are** that vocabulary. They define margin rules, interactive spacing, hover elevations, font scaling, and more. They become the standard by which “correctness” is judged across browser, platform, and resolution.
+When every property is tied to a token, your design system gains governance, consistency, and resilience. Tokens provide a shared vocabulary that all contributors understand, and they define how spacing, color, and interaction patterns apply across every platform.
 </FloatInRight>
 
 <CloudBulletList
   items={[
-    'Tokens define the foundation of every reusable component',
-    'Component behavior inherits from token logic automatically',
-    'Tokens support themes, states, and platform variations seamlessly',
-    'System-wide updates are safer through centralized token governance',
-    'Visual consistency becomes a natural byproduct, not a forced effort'
+    'Tokens provide a single source of truth for all component styles',
+    'Behavior and appearance inherit directly from token logic',
+    'Themes and platform variations become easy to manage',
+    'System wide updates are safer with centralized governance',
+    'Visual consistency emerges naturally from shared definitions'
   ]}
 />
-<AnimatedFigureCaption>Figure 3. Key benefits of token-powered components in a design system.</AnimatedFigureCaption>
+<AnimatedFigureCaption>
+Figure 3. Benefits of token powered components, highlighting why centralized logic scales.
+</AnimatedFigureCaption>
+
+<FloatInLeft>
+When these benefits compound across dozens of components, the result is a system that feels unified and professional, regardless of who built or touched each element.
+</FloatInLeft>
 
 ---
 
-## 🧬 Token Reuse Across Multiple Components
+## Token Reuse Across Components
 
 <FloatInLeft>
-Let’s go deeper. What happens when multiple components share tokens for background color, shadow, or corner radius? The result is cohesion—even across unrelated surfaces. This reuse is what builds true visual rhythm.
+Tokens are not siloed to one component. When multiple components share background colors, shadow levels, or corner radii, the interface naturally gains rhythm and harmony. Users perceive a single product identity rather than a patchwork of mismatched elements.
 </FloatInLeft>
 
 <ComponentUsageExamplesCloud />
-<AnimatedFigureCaption>Figure 4. Multiple components sharing the same foundational token values.</AnimatedFigureCaption>
+<AnimatedFigureCaption>
+Figure 4. Multiple components sharing the same token values, reinforcing consistent behavior and appearance.
+</AnimatedFigureCaption>
 
 <CloudFigure
   imageSrc="/cumulus-ui-library/img/component-stack-diagram.png"
-  caption="Figure 5. How token reuse across components forms a layered visual stack across different product views."
+  caption="Figure 5. Token reuse across layers creates a consistent visual stack across product views."
 />
 
 <FloatInRight>
-This figure illustrates how layered token reuse stitches together a design system. Across multiple product surfaces—landing pages, dashboards, or mobile overlays—the same token values thread through each component’s anatomy. This leads to less cognitive load, fewer visual regressions, and better cross-platform parity.
+This reuse simplifies maintenance. A single token update can align entire product surfaces, from dashboards to modals, without introducing inconsistencies.
 </FloatInRight>
 
 ---
 
-## 🌲 Dependency Mapping and System Insight
+## Dependency Mapping and System Insight
 
 <FloatInLeft>
-As systems grow, token logic gets more complex. Tokens reference other tokens. Themes introduce platform overrides. Default values fall back to semantic aliases. Understanding these layers becomes essential to prevent breaking changes and design drift.
+As your design system matures, tokens begin referencing other tokens, creating relationships that enable themes and aliasing. Visualizing these relationships prevents accidental breaking changes and makes system maintenance far more predictable.
 </FloatInLeft>
 
 <TokenDependencyTree />
-<AnimatedFigureCaption>Figure 6. A token dependency tree mapping relationships across multiple components and aliases.</AnimatedFigureCaption>
+<AnimatedFigureCaption>
+Figure 6. A token dependency tree mapping relationships across components and semantic layers.
+</AnimatedFigureCaption>
 
 <CloudFigure
   imageSrc="/cumulus-ui-library/img/token-alias-explainer.png"
-  caption="Figure 7. A diagram explaining how token aliases resolve across different themes and component layers."
+  caption="Figure 7. How token aliases resolve across themes and component layers."
 />
 
 <FloatInRight>
-Dependency graphs give clarity to complex systems. You can audit a token’s usage, discover alias hierarchies, and avoid circular logic. This helps with refactors, deprecations, onboarding, and governance. Just like understanding a city’s transit map, seeing token paths in context reduces missteps and increases efficiency.
+These dependency views reveal hidden complexity. By auditing token relationships, you can clean up unused values, resolve conflicting aliases, and ensure updates cascade logically rather than unexpectedly.
 </FloatInRight>
 
 ---
 
-## 🆚 Before vs After: Why Tokenization Wins
+## Before and After: Tokenization in Action
 
 <BeforeAfterTokenDemo />
-<AnimatedFigureCaption>Figure 8. A visual comparison between raw hardcoded styles and tokenized values inside components.</AnimatedFigureCaption>
+<AnimatedFigureCaption>
+Figure 8. A comparison between hardcoded styles and tokenized values, demonstrating flexibility and long term maintainability.
+</AnimatedFigureCaption>
 
 <FloatInLeft>
-The difference is stark. Hardcoded values lock you into one-off decisions. They resist theme updates, ignore platform rules, and accumulate as visual debt. Tokens, by contrast, unlock abstraction. They flex with context. They evolve with time. They serve as the single source of visual truth.
+Hardcoded values may work for a single page, but they do not scale. They resist theme updates, make accessibility fixes difficult, and create long term design debt. Tokenization unlocks adaptability, letting you modify and evolve design rules without touching every line of code.
 </FloatInLeft>
 
 <CloudNoteBox>
-Use tokens instead of hardcoded values to ensure consistency, scalability, and long-term visual alignment across your platform. Tokens act as living contracts between intent and execution.
+Use tokens instead of hardcoded values to ensure consistency, scalability, and alignment between design intent and implementation.
 </CloudNoteBox>
 
 <FloatInRight>
-Tokens are infrastructure. When properly adopted, your design system shifts from UI kit to UI operating system. Every element becomes programmable, styleable, and versionable from a single shared vocabulary.
+A token driven system becomes more than a collection of components. It evolves into a framework that supports innovation, simplifies maintenance, and keeps design intent intact from concept to delivery.
 </FloatInRight>
 
 <CloudFigure
   imageSrc="/cumulus-ui-library/img/design-system-os-analogy.png"
-  caption="Figure 9. Your design system works like an operating system, coordinating logic, presentation, and structure across your UI stack."
+  caption="Figure 9. A design system that functions like an operating system, coordinating logic, presentation, and structure across your UI."
 />
 
 ---
 
-## ✨ Recap and What’s Next
+## Recap and What’s Next
 
 <FloatInLeft>
-In this section, we explored the deep interconnection between design tokens and components. We examined how tokens map to visual zones, fuel consistency across component families, and offer traceability for every styling decision. The use of anatomy diagrams, dependency trees, and real-world examples reinforced how tokens shape systems that are flexible, scalable, and visually unified.
+In this section, you explored how design tokens form the backbone of every component. We covered anatomy mapping, token inheritance, dependency insights, and the visible benefits of centralized logic. These practices ensure components remain consistent, maintainable, and ready to adapt as your product evolves.
 </FloatInLeft>
 
 <FloatInRight>
-With token-driven logic, your design system becomes more than a toolkit—it becomes a platform. Teams iterate faster, design alignment improves, and refactors gain predictability. These principles form the core of sustainable, enterprise-grade component systems.
+With this foundation in place, your system becomes more than a toolkit. It is a platform that enables faster iterations and predictable updates. As your team grows, these principles prevent regressions and support scaling across new product lines.
 </FloatInRight>
 
 <FloatInLeft>
-But building structure is only half the story. In the next section, we’ll explore what happens when change inevitably arrives. Whether introducing dark mode, launching a mobile theme, or refactoring legacy styles, your token and component structure needs a **versioning strategy**. You’ll learn how to evolve safely, govern token upgrades, and manage semantic intent without breaking legacy UIs. Because the only thing harder than building a good system is keeping it good.
+Next, you will move into **Versioning Strategy**. Here you will learn how to evolve tokens and components responsibly over time. You will see how to deprecate old values, introduce new themes, and manage semantic intent without creating unnecessary churn. A strong versioning approach ensures that your design system remains future proof while continuing to serve current needs.
 </FloatInLeft>

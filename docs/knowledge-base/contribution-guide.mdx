@@ -22,70 +22,71 @@ import {
 # ✍️ Contribution Guide
 </FloatInPlace>
 
+---
+
 <FloatInLeft>
-A design system is more than a library of components, it is a shared contract between teams. Every button, badge, layout rule, or token reflects an intent: how we scale consistency, performance, and visual identity across products. Without contributors who think systemically, the design system begins to lose coherence. Updates drift apart, patterns become isolated, and logic splinters into fragments.
+A design system is more than a library of components, it is a shared contract that binds teams together. Every button, badge, layout rule, and token carries intent. It is how we scale consistency, performance, and brand integrity across products. Without thoughtful contributions that respect the system, coherence erodes. Updates fragment into isolated fixes, and logic stops flowing as a unified language.
 </FloatInLeft>
 
 <FloatInRight>
-At Cumulus, we approach contribution as a systemic act, not an isolated gesture. Whether you're proposing a new component or refining a spacing token, your work contributes to the underlying infrastructure. Contributions are not temporary, they are structural. That is why everything submitted must be reusable, documented, theme-aware, and accessible by default.
+At Cumulus, contribution is not a side task, it is a systemic responsibility. When you submit a change, you are shaping the foundation that others will build on. Contributions are expected to be reusable, documented, tokenized, theme aware, and accessible from the start. This is how we protect clarity and prevent regression as our ecosystem grows.
 </FloatInRight>
 
 <FloatInLeft>
-This guide is your reference for making contributions that align with Cumulus standards. You will learn what qualifies as a system-ready component, how tokens are structured and applied, how documentation is written, and how reviewers evaluate your pull request. This is not just a submission pipeline, it is a shared learning model.
+This guide shows you how to create contributions that meet those expectations. You will learn what defines a system‑ready component, how tokens drive every decision, how to document effectively, and what reviewers look for during a pull request. Think of this not as a checklist but as a shared operating model that ensures the system stays healthy.
 </FloatInLeft>
 
 <FloatInRight>
-When you contribute effectively, your work becomes more than a patch. It becomes a foundation, a pattern, and a teaching artifact. A single component might power five interfaces, support multiple themes, or inform years of future development. This guide shows you how to build that kind of impact.
+A contribution done well is more than a fix, it becomes a pattern that scales. A single tokenized component can power multiple products, adapt to different themes, and remain relevant through years of iteration. This guide is here to help you achieve that level of impact.
 </FloatInRight>
 
 ---
 
-## 🧑‍🚀 Contribution Personas
+## Contribution Personas
 
 <FloatInLeft>
-Contributors do not all come from the same background. Designers shape visual intent. Developers implement logic and tokens. Writers craft documentation and language patterns. QA teams validate accessibility, edge cases, and compliance. These different roles are not silos, they are perspectives that strengthen the system.
+Not all contributors come from the same perspective. Designers drive visual intent, developers translate decisions into code, writers shape language and educational clarity, and QA specialists validate against accessibility and edge cases. These are not separate silos but complementary viewpoints that strengthen the system when aligned.
 </FloatInLeft>
 
 <FloatInRight>
-Understanding your persona helps you design contributions with broader awareness. Developers consider token compliance and interactive states. Designers focus on semantic color usage and layout intent. Writers think about onboarding clarity and glossary terms. Each brings unique value, but the expectations remain shared across roles.
+Understanding your role helps you see the broader context. A developer should think about token structure and responsive states. A designer should consider semantic color usage and accessibility patterns. A writer should embed clarity and glossary terms. Each perspective is unique, but expectations are shared and contributions should be aware of their downstream effects.
 </FloatInRight>
 
 <ContributionPersonaRow />
-
 <AnimatedFigureCaption>
-Figure 1. Common contributor personas and their system-facing responsibilities.
+Figure 1. Common contributor personas and the shared responsibilities they bring to the system.
 </AnimatedFigureCaption>
 
 <FloatInLeft>
-You are not expected to know everything about every role, but you are expected to understand how your contribution affects others. A designer who understands token usage can name them more clearly. A developer who understands documentation flow can create more teachable props. A writer who grasps component behavior can clarify its interaction model. This is what systemic thinking looks like in practice.
+You are not required to master every domain, but you are expected to respect the system beyond your own expertise. Designers who understand token rules name elements more intuitively. Developers who grasp documentation flows create better handoffs. Writers who understand component behavior produce clearer explanations. This awareness keeps contributions aligned instead of isolated.
 </FloatInLeft>
 
 <FloatInRight>
-This shared awareness creates a system where contributions do not conflict or drift. They align. They extend. They anticipate. Now let us explore what elevates a component from functional to system-ready.
+When each perspective understands the others, the system grows as a cohesive whole. It prevents duplicated effort, conflicting approaches, and hard‑to‑maintain work. With this in mind, let’s examine what elevates a component beyond functionality into true system readiness.
 </FloatInRight>
 
 ---
 
-## 🔧 What Makes a Good Component?
+## What Makes a Good Component
 
 <FloatInLeft>
-In a local codebase, it is enough for a component to work. But in a system like Cumulus, it must scale. A system-ready component must support theming, use tokens consistently, include all interaction states, and be accessible out of the box. It should not assume hardcoded styles or static values. It must be legible to developers and predictable for users.
+A working component is not enough. In Cumulus, a component must scale. That means it supports theming, uses tokens consistently, represents every state, and is accessible by default. A component should never rely on hardcoded values. It should be adaptable and understandable to anyone who uses it later.
 </FloatInLeft>
 
 <FloatInRight>
-A strong component is not just usable—it is teachable. Its structure reveals design intent. Its props are expressive. Its logic is modular. When others read your code or documentation, they should feel confident using it without hesitation. Trust is earned through predictability, clarity, and repeatability. That is what separates a one-off widget from a reusable system element.
+A system‑ready component is clear in intent and structure. Its props are expressive, its logic modular, and its styling grounded in tokens. When a reviewer reads your code and documentation, they should feel confident integrating it immediately. Predictability and clarity build trust, which is the hallmark of reusable work.
 </FloatInRight>
 
 <FloatInLeft>
-Tokenization is where this begins. Avoid pixel values, use spacing tokens. Avoid raw color values, use semantic tokens. Avoid motion shortcuts, use motion tokens. If your component uses `--spacing-md`, `--color-bg-surface`, and `--easing-fade`, then your work becomes instantly adaptable across light/dark themes, accessibility needs, and branding shifts.
+Tokenization is the foundation. Do not hardcode pixel values; reference spacing tokens. Do not insert raw color codes; use semantic color tokens. Motion, elevation, typography, and spacing all have token equivalents. By following these patterns, your component instantly inherits theme support, accessibility considerations, and global consistency.
 </FloatInLeft>
 
 <FloatInRight>
-From there, focus on interactivity. Every state—hover, focus, active, disabled, error—should be represented and documented. Storybook is not optional. It is your system mirror. If a user might encounter a state, you must preview and test it. Include edge cases. Include responsiveness. A component that only works at one screen size or in one color mode is not system-ready.
+Interactivity is equally important. Every state a user might encounter—hover, focus, active, disabled, and error—should be implemented and previewed in Storybook. It is not optional. Storybook is the mirror of your component’s capability. Include responsive variations and confirm behavior in both light and dark modes. A system component must succeed in many contexts, not just one.
 </FloatInRight>
 
 <FloatInLeft>
-And then there is documentation. It is not a nice-to-have, it is the other half of your work. Your `.mdx` file should explain intent, token usage, edge cases, keyboard access, and usage scenarios. It should use `<CloudFigure>` for visuals, `<HoverExplain>` for tooltips, and narrative sections that educate others. This is where your work becomes part of a living system.
+Documentation completes the process. Your `.mdx` page should explain the component’s purpose, detail its token usage, outline keyboard access, and include examples. Use visuals with `<CloudFigure>` and embed contextual guidance where appropriate. A well‑documented component educates future contributors, making your work multiply in value.
 </FloatInLeft>
 
 <BeforeAfterContributionView
@@ -93,8 +94,8 @@ And then there is documentation. It is not a nice-to-have, it is the other half 
     title: "Before: Incomplete Contribution",
     points: [
       "Hardcoded styles",
-      "No Storybook states",
-      "Missing documentation",
+      "Missing interaction states",
+      "No documentation",
       "No token usage"
     ]
   }}
@@ -102,42 +103,42 @@ And then there is documentation. It is not a nice-to-have, it is the other half 
     title: "After: Ideal Contribution",
     points: [
       "Fully tokenized styling",
-      "All interaction states in Storybook",
-      "Documented with visuals + glossary terms",
-      "Responsive and accessible"
+      "Comprehensive Storybook states",
+      "Clear documentation with visuals",
+      "Responsive and accessible behavior"
     ]
   }}
 />
 <AnimatedFigureCaption>
-Figure 2. A comparison between incomplete and ideal component contributions.
+Figure 2. A comparison between incomplete and ideal contributions, showing how system readiness adds lasting value.
 </AnimatedFigureCaption>
 
 <FloatInRight>
-This visual contrast is what we see in reviews every week. Contributors who skip tokenization, Storybook states, or documentation slow the system. Contributors who follow this model multiply the system. When your work scales, it becomes not just helpful, but durable. Let us now look at how that durability is built through the full contribution lifecycle.
+This difference is visible in every review. Incomplete contributions create friction and maintenance cost. Ideal contributions multiply system value, reduce future effort, and teach best practices. The next step is to understand how these principles play out across the entire contribution lifecycle.
 </FloatInRight>
 
 ---
 
-## ☁️ From Design to Merge: The Lifecycle
+## From Design to Merge: The Lifecycle
 
 <FloatInLeft>
-Every contribution begins with design intent. Whether it's a new component or a token update, you must articulate what you are solving and why. What is the use case? What system gap are you addressing? Clear intent helps prevent duplication and guides reviewers toward approval.
+Every contribution begins with intent. Define the problem you are solving and the system gap you are closing. Clear intent aligns your reviewers and prevents duplication. Without intent, even a technically correct contribution can feel misplaced.
 </FloatInLeft>
 
 <FloatInRight>
-Then comes the token proposal. Visual values must be abstracted into reusable design tokens. If you are introducing a new spacing or background style, create a token for it. Token proposals must follow naming conventions and fit into the semantic structure. They are the connective tissue between design and implementation.
+Once intent is clear, propose any required tokens. New visual values must be captured as tokens with semantic names that fit existing structures. A token proposal links your design to implementation, ensuring future adaptability without scattered overrides.
 </FloatInRight>
 
 <FloatInLeft>
-Next is development. You build the component using semantic markup, tokenized styling, keyboard support, and interaction logic. The code must support light and dark themes, respect user preferences, and work across common breakpoints. If you cannot test it in multiple modes, it is not system-ready.
+Development follows. Build your component with semantic markup and tokenized styling. Confirm that it functions in light and dark modes, across breakpoints, and with keyboard navigation. Test accessibility features such as ARIA attributes and screen reader clarity. A component is not complete until it meets these standards.
 </FloatInLeft>
 
 <FloatInRight>
-With code in place, you write your Storybook preview. Every state must be shown. Use controls to demonstrate prop changes. Cover loading, error, success, and interactive states. Test responsiveness and color modes. Storybook is not just a demo—it is your contribution’s proof of coverage.
+Create your Storybook preview. Include every interaction state and edge case. Use controls to show prop variations. A reviewer should be able to see exactly how the component behaves without leaving the Storybook environment. Storybook is both a test bed and a living showcase.
 </FloatInRight>
 
 <FloatInLeft>
-Now, documentation. Create a `.mdx` file with a FloatIn introduction, CloudFigures, glossary terms, and long-form explanation. Teach the intent and usage clearly. Your component must educate as well as perform. If documentation is skipped or vague, the system loses clarity.
+Then document everything in your `.mdx` file. Use long‑form narrative, token references, and visuals to explain usage. Clarify edge cases, accessibility requirements, and intended contexts. A strong documentation page is what allows others to trust and adopt your work quickly.
 </FloatInLeft>
 
 <ContributionFlowCloud
@@ -147,31 +148,44 @@ Now, documentation. Create a `.mdx` file with a FloatIn introduction, CloudFigur
     "Component Development",
     "Storybook Preview",
     "Documentation",
-    "PR Submission",
-    "Review + Merge"
+    "Pull Request Submission",
+    "Review and Merge"
   ]}
 />
-
 <AnimatedFigureCaption>
-Figure 3. The standard Cumulus contribution lifecycle from idea to merge.
+Figure 3. The Cumulus contribution lifecycle, illustrating how ideas progress through design, development, and documentation before merging.
 </AnimatedFigureCaption>
 
 <FloatInRight>
-Once documentation is in place, open your PR. Write a clear summary, include screenshots, link to designs, and explain your tokens. Your PR should be a snapshot of the entire lifecycle, not just a diff of code. Show your thought process, not just your file tree.
+When you open a pull request, include screenshots, a link to design references, and a clear explanation of the tokens you introduced or updated. Your pull request should tell the story of the contribution, not just list file changes. This context speeds up review and establishes trust in your work.
 </FloatInRight>
 
-<CloudFigure imageSrc="/cumulus-ui-library/img/contribution-lifecycle-placeholder.png" caption="Figure 4. The contribution lifecycle from idea to merge." />
+<CloudFigure imageSrc="/cumulus-ui-library/img/contribution-lifecycle-placeholder.png" caption="Figure 4. The complete lifecycle from idea to merge, guiding contributors toward systemic impact." />
 
 <FloatInLeft>
-During review, every layer is inspected. Are tokens used correctly? Are all states covered in Storybook? Is documentation clear? Is the component responsive and accessible? If your submission walks the full lifecycle, review is fast. If it skips steps, it slows the team. Review is not about nitpicking, it is about verifying system integrity.
+During review, each layer is inspected. Token usage, Storybook states, documentation clarity, and responsiveness are all evaluated. A contribution that covers the full lifecycle moves quickly through review. A contribution that skips steps creates delays and uncertainty.
 </FloatInLeft>
 
 <FloatInRight>
-Once approved and merged, your contribution becomes part of the system’s knowledge base. It becomes referenceable. It teaches others. And it lives beyond its original author. That is what system-ready means. It is not about style, it is about stability and continuity.
+Once approved and merged, your work becomes part of the system’s living knowledge base. It is no longer just your code. It becomes a reference, a teaching tool, and a foundation for future contributions. That is the goal of a system‑ready component.
 </FloatInRight>
 
 ---
 
+## Recap and What’s Next
 
-##  Recap and What’s Next
-<FloatInLeft> A successful contribution does not start with code. It begins with awareness. Awareness of system principles, token standards, accessibility expectations, and documentation clarity. By walking through the full lifecycle—from intent to merge—you build components that others can trust, extend, and learn from. You contribute not just features, but structure. </FloatInLeft> <FloatInRight> Every part of this guide has reinforced the idea that design systems are not maintained by individuals, but by systems of process and shared understanding. That understanding must show up in your Storybook previews, your token usage, your accessibility practices, and your documentation flow. It is not a burden—it is a multiplier. </FloatInRight> <FloatInLeft> In the next section, we will explore the foundational standards that every contributor must respect: accessibility. You will learn how keyboard interaction, screen reader support, color contrast, and tokenized styling come together to define what is acceptable inside a system. Accessibility is not a final step, it is a continuous filter across everything you write, build, and review. </FloatInLeft> <FloatInRight> By mastering contribution practices, you are now prepared to take your work to a higher standard—one that includes every user, regardless of ability or environment. Let us move into the accessibility section and define how inclusivity becomes a baseline expectation for every component in Cumulus. </FloatInRight>
+<FloatInLeft>
+Successful contributions begin with awareness. Awareness of system standards, token practices, accessibility requirements, and documentation principles. By following the full lifecycle, from intent through merge, you create assets that are stable, scalable, and easy for others to adopt. Every contribution strengthens the system when built this way.
+</FloatInLeft>
+
+<FloatInRight>
+This guide demonstrates that design systems are maintained through shared process and understanding, not isolated effort. Your Storybook previews, token usage, **accessibility** patterns, and documentation all reflect that shared responsibility. This is not extra work. It is the multiplier that allows teams to build faster and with confidence.
+</FloatInRight>
+
+<FloatInLeft>
+In the next section, you will explore **accessibility** in depth. You will learn how keyboard navigation, screen reader support, color contrast, and tokenized styling define what is acceptable inside the system. Accessibility is not a final step, it is a continuous lens applied to every component.
+</FloatInLeft>
+
+<FloatInRight>
+By mastering these contribution practices, you are ready to elevate your work to meet higher standards; standards that include every user, regardless of ability or environment. Continue to the accessibility section to see how inclusivity is built directly into the DNA of Cumulus.
+</FloatInRight>

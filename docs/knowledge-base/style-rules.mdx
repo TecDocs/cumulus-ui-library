@@ -21,27 +21,19 @@ import {
 </FloatInPlace>
 
 <FloatInLeft>
-Design systems must operate with **clarity**. Without **structure**, even the most beautiful components crumble under inconsistency, edge-case chaos, and unpredictable behavior. A true design system is not just a pattern collection, it is a **visual language**. At Cumulus, this language is built on a system of **enforceable style rules** that govern layout, rhythm, composition, and interactivity.
+A design system cannot succeed without **enforceable structure**. Without rules, even the most beautiful components collapse under inconsistency, last‑minute hacks, and unpredictable edge cases. A mature design system is more than a library, it is a **visual language** that every contributor can speak fluently. At Cumulus, this language is defined through **style rules** that shape spacing, rhythm, composition, typography, and interactivity.
 </FloatInLeft>
 
 <FloatInRight>
-These **style rules** define how spacing flows, how typography scales, how feedback is triggered, and how visual elements adapt across themes. They serve as **foundational logic** for everything downstream, including every button hover, modal transition, and text block spacing. When these rules are honored, systems breathe; when they’re ignored, the system fractures.
-</FloatInRight>
-
-<FloatInLeft>
-This guide presents not just the rules, but the **reasoning behind each one**. You'll find examples of effective design alongside common pitfalls. Components are visual structures, and the rules that govern them must be **practical**, **scalable**, and **theme-aware**. Our goal is to build **stability at every layer**, so contributors can focus on functionality, not fixing layout bugs.
-</FloatInLeft>
-
-<FloatInRight>
-From tokenized spacing to role-based elevation shifts, each section in this guide expands your understanding of how **visual consistency drives user confidence**. These aren't arbitrary suggestions, they are **strategic constraints**, optimized for clarity, performance, and cross-team collaboration.
+These **rules** are not arbitrary. They are **strategic constraints** designed to prevent drift, reduce rework, and build visual trust across every surface. When style rules are honored, interfaces feel effortless. When they are ignored, systems fracture and teams lose confidence. Think of these rules as the blueprint and the guardrail—a **shared contract** that keeps design and development aligned.
 </FloatInRight>
 
 ---
 
-## 📏 Layout & Spacing Rhythm
+## 📏 Layout and Spacing Rhythm
 
 <FloatInLeft>
-**Spacing** is more than aesthetics, it sets rhythm. Rhythm leads to flow, and flow is what makes complex interfaces feel intuitive rather than overwhelming. At Cumulus, we use a fixed token system such as **4px, 8px, 16px, and 32px** to align all padding, margin, and gap properties.
+**Spacing is the heartbeat of an interface.** It creates rhythm, and rhythm drives flow. A clear rhythm is what makes complex dashboards or dense forms feel approachable rather than chaotic. Cumulus uses a fixed set of spacing tokens: **4px, 8px, 16px, 32px**—to govern all padding, margins, and grid gaps. These values act as the “beats” in our design music.
 </FloatInLeft>
 
 <RhythmSpacingWaves
@@ -50,15 +42,15 @@ From tokenized spacing to role-based elevation shifts, each section in this guid
 />
 
 <AnimatedFigureCaption style={{ marginTop: '1.5rem' }}>
-Figure 1. Spacing rhythm using tokenized values versus irregular intervals. The 12px bar disrupts harmony and breaks layout cohesion.
+**Figure 1.** A predictable spacing rhythm versus irregular intervals. Introducing off‑system values like 12px disrupts alignment and creates hidden maintenance costs.
 </AnimatedFigureCaption>
 
 <FloatInRight>
-Using **fixed intervals** ensures vertical and horizontal rhythm across screens. Developers no longer debate if 10px feels better than 12px; designers don't second-guess margins. Everyone speaks the same rhythm, making updates seamless and scalable.
+**Why this matters:** Predictable spacing ensures that every designer, engineer, and reviewer speaks the same language. Developers stop debating arbitrary values, designers stop eyeballing margins, and layouts adapt more gracefully to responsive contexts.
 </FloatInRight>
 
 <FloatInLeft>
-Avoiding arbitrary values also improves **responsiveness**. Grid systems and flexbox layouts snap naturally when spacing is predictable. Elements align, gutters breathe, and stacking behavior becomes frictionless. The token system becomes a **visual metronome**.
+**Common Pitfall:** Avoid introducing “one‑off” spacing. A single hardcoded value can snowball into dozens of inconsistencies that are hard to trace later. When in doubt, choose the nearest approved token.
 </FloatInLeft>
 
 ---
@@ -66,7 +58,7 @@ Avoiding arbitrary values also improves **responsiveness**. Grid systems and fle
 ## 🔤 Typography Consistency
 
 <FloatInRight>
-**Typography** is one of the first things users encounter. It must speak clearly. Good typography establishes **visual hierarchy**, maintains **accessibility**, and enables users to scan content without strain. When heading levels blur, or spacing collapses, users hesitate, and hesitation is friction.
+**Typography is the voice of your interface.** It must be clear, scannable, and trustworthy. Inconsistent heading levels, mismatched line heights, or random font weights create cognitive friction. At Cumulus, we enforce **distinct type scales** and **tokenized font sizes** so that hierarchy remains obvious.
 </FloatInRight>
 
 <StylePreviewRowCloud
@@ -75,15 +67,15 @@ Avoiding arbitrary values also improves **responsiveness**. Grid systems and fle
 />
 
 <AnimatedFigureCaption style={{ marginTop: '1.5rem' }}>
-Figure 2. Strong typography uses distinct font sizes, weight, and spacing to maintain scannability and clarity.
+**Figure 2.** Strong typography versus weak typography. Distinct spacing and scale prevent users from getting lost in content.
 </AnimatedFigureCaption>
 
 <FloatInLeft>
-A system should **enforce spacing** above and below headings. It should assign meaning to font scale, not use arbitrary values. For instance, an **H2** should always sit at a consistent distance from nearby content and follow **semantic intent**. Designers must avoid using identical sizes for H3 and H4 headings or assigning bold weight to unrelated labels.
+Headings should always follow semantic intent, an H2 must visually separate itself from an H3. Spacing above and below text blocks follows **vertical rhythm tokens**, ensuring headers do not collide with content.
 </FloatInLeft>
 
 <FloatInRight>
-In Cumulus, typography follows a **vertical rhythm** matched to spacing tokens. This ensures every section header, paragraph, and button label fits into the same grid logic. We enforce **line-height ranges** for legibility and set **max-widths** for content blocks to avoid wide, hard-to-read text walls.
+**Common Pitfall:** Reusing the same size for multiple heading levels or applying bold weights indiscriminately. This erodes visual hierarchy and creates uncertainty for both users and maintainers.
 </FloatInRight>
 
 ---
@@ -91,23 +83,21 @@ In Cumulus, typography follows a **vertical rhythm** matched to spacing tokens. 
 ## 🧱 Component Composition
 
 <FloatInLeft>
-Each UI component in Cumulus follows a **structural layout model**. That model includes a header zone, content area, interaction row, and feedback zone. These are not suggestions, they are **enforced slots** within the system’s design frame. This ensures padding and spacing behave consistently across variants and themes.
+Every Cumulus component follows a **defined structure**: a header zone, content zone, interaction zone, and feedback zone. These are not loose suggestions, they are enforced patterns that ensure **consistency across every component type**.
 </FloatInLeft>
 
-<ComponentStructureOverlay
-  caption="Each component is built from structured zones that align to token spacing and layout logic."
-/>
+<ComponentStructureOverlay caption="Component zones align to tokenized spacing and layout logic." />
 
 <AnimatedFigureCaption style={{ marginTop: '1.5rem' }}>
-Figure 3. Component structure ensures alignment, predictability, and theme-safe responsiveness across content zones.
+**Figure 3.** A clear component anatomy creates predictable layouts and reduces error states.
 </AnimatedFigureCaption>
 
 <FloatInRight>
-**Composition prevents drift**. It keeps interactive rows aligned regardless of button count. It ensures error states appear in the correct location. This is especially critical on mobile and small screens, where predictable stacking behavior is essential.
+**Why this matters:** Without structure, contributors insert features wherever they see fit, leading to drift and confusion. By following these slots, new features integrate seamlessly with existing layouts.
 </FloatInRight>
 
 <FloatInLeft>
-When a contributor adds a new feature to a card, they know exactly where to insert it. No guessing, no trial and error. This makes documentation easier and improves the confidence of engineers and designers. We call this **compositional safety**, and it’s one of the system’s most powerful enablers.
+**Common Pitfall:** Placing error states or buttons outside their designated zones. This creates misalignment, especially in responsive designs where stacking behavior matters most.
 </FloatInLeft>
 
 ---
@@ -115,7 +105,7 @@ When a contributor adds a new feature to a card, they know exactly where to inse
 ## 🖱️ Interactive Feedback
 
 <FloatInRight>
-**Hover states, active states**, and **focus rings** provide affordance. Without them, users are left to guess which elements are interactive. Feedback is not flair, it is a form of **interface guidance**.
+**Feedback is guidance.** Hover states, focus rings, and active states tell users where they can act. Without them, users are left guessing which elements are interactive.
 </FloatInRight>
 
 <StylePreviewRowCloud
@@ -124,23 +114,23 @@ When a contributor adds a new feature to a card, they know exactly where to inse
 />
 
 <AnimatedFigureCaption style={{ marginTop: '5rem' }}>
-Figure 4. Good feedback glows or animates to indicate readiness. Poor feedback appears static, leaving the user unsure.
+**Figure 4.** Feedback done well uses glow and motion to show readiness, while poor feedback leaves users uncertain.
 </AnimatedFigureCaption>
 
 <FloatInLeft>
-Cumulus mandates **glow states** for key elements like buttons and inputs. Glow intensity varies slightly based on component priority. For example, primary buttons may use brighter shadows than tertiary links. **Keyboard focus** must be visible and meet WCAG contrast ratios.
+Cumulus applies **glow states** for key actions. Keyboard focus states must meet **WCAG contrast ratios** and be visible across themes. Transitions are tuned for **150ms ease‑in‑out**, giving smooth feedback without distraction.
 </FloatInLeft>
 
 <FloatInRight>
-**Animations** are tuned for smoothness without distraction. A 150ms ease-in-out transition is the default for hover states; active states trigger faster visual confirmation. We never use jarring color jumps or invisible interaction zones.
+**Common Pitfall:** Removing focus outlines without providing a replacement. This breaks accessibility and leaves keyboard users stranded.
 </FloatInRight>
 
 ---
 
-## 🌗 Theme-Aware Elevation
+## 🌗 Theme‑Aware Elevation
 
 <FloatInLeft>
-**Elevation** helps users understand depth and hierarchy, but it must do so without glare or distraction. In light mode, elevation uses soft shadows. In dark mode, shadows become harsh, so glows replace them to preserve contrast and comfort.
+**Elevation communicates depth.** In light mode, soft shadows imply hierarchy without stealing attention. In dark mode, shadows lose contrast, so **glows replace them** to maintain clarity and comfort.
 </FloatInLeft>
 
 <ThemeAdaptiveRuleCard
@@ -150,11 +140,11 @@ Cumulus mandates **glow states** for key elements like buttons and inputs. Glow 
 />
 
 <AnimatedFigureCaption style={{ marginTop: '1.5rem' }}>
-Figure 5. Light mode elevation uses soft shadows to imply hierarchy without overloading contrast.
+**Figure 5.** Subtle shadows create layers without visual clutter.
 </AnimatedFigureCaption>
 
 <FloatInRight>
-Light-mode elevation should feel **natural**. We avoid strong black drop shadows. Instead, layers rise gently with softness. This subtle elevation gives focus without pulling visual weight unnecessarily. Padding within elevated zones still follows spacing tokens.
+**Why this matters:** Overly strong shadows feel heavy and cheap. Instead, use gentle shadows that scale with component priority, always respecting token spacing and alignment.
 </FloatInRight>
 
 <ThemeAdaptiveRuleCard
@@ -164,11 +154,11 @@ Light-mode elevation should feel **natural**. We avoid strong black drop shadows
 />
 
 <AnimatedFigureCaption>
-Figure 6. In dark mode, glows replace shadows to preserve eye comfort while clearly separating content layers.
+**Figure 6.** In dark mode, soft glows define hierarchy where shadows would otherwise vanish.
 </AnimatedFigureCaption>
 
 <FloatInLeft>
-In dark mode, shadow layering often looks muddy. Instead, we use subtle **glows in cyan or teal** that blend into the background. These glows create depth without harshness and help distinguish surfaces in a way that’s both accessible and polished.
+**Common Pitfall:** Copying light mode shadow tokens into dark mode without adjustment. This leads to muddy layers and inaccessible contrast. Always verify elevation cues in both themes.
 </FloatInLeft>
 
 ---
@@ -176,25 +166,13 @@ In dark mode, shadow layering often looks muddy. Instead, we use subtle **glows 
 ## ✅ Recap
 
 <FloatInRight>
-Style rules are more than guidelines. They are **enforceable constraints** that accelerate development. With shared spacing, typography, component structure, and interactive feedback, teams move faster with fewer decisions and more confidence.
+Style rules are **non‑negotiable building blocks**. They accelerate design and development by removing guesswork and enforcing a shared vocabulary. Spacing, typography, structure, feedback, and elevation are all connected—break one, and the system loses integrity.
 </FloatInRight>
 
 <FloatInLeft>
-Cumulus provides reusable systems for **elevation**, **responsive layout**, and **adaptive feedback**. These rules scale across teams, reducing errors and ensuring visual integrity at every level. The system holds steady, even with dozens of contributors.
+Cumulus’s style rules are not just preferences. They are **governance tools** that keep your product scalable, accessible, and polished. Respect these rules, and your components will feel cohesive even before real content is added.
 </FloatInLeft>
 
 <FloatInRight>
-When style rules are respected, the product feels fast, elegant, and thoughtfully designed—even before any real content appears. These rules build **visual trust** at the very first glance.
-</FloatInRight>
-
----
-
-## ⏭️ What’s Next: Auth & Permissions
-
-<FloatInLeft>
-With system structure complete, the next frontier is **conditional visibility**. Not all components should show the same content to every user. We’ll explore **role-gated layouts**, **permissions**, and dynamic views next.
-</FloatInLeft>
-
-<FloatInRight>
-This is where style meets logic. By combining design rules with permission logic, we make interfaces not only beautiful—but secure and dynamic. Let’s continue by enabling components to adapt to user roles.
+**Next up:** we connect visual rules with logic. In the **Auth & Permissions** section, you will see how components adapt to user roles, making your system not just beautiful, but secure and dynamic.
 </FloatInRight>
