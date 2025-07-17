@@ -7,7 +7,9 @@ export default {
 };
 
 export const Default = () => (
-  <FloatInRight>
+  <FloatInLeft>
+
     <h2>Floats in from the right!</h2>
-  </FloatInRight>
+  </FloatInLeft>
+
 );

@@ -24,9 +24,11 @@ import {
 A design system cannot succeed without **enforceable structure**. Without rules, even the most beautiful components collapse under inconsistency, last‑minute hacks, and unpredictable edge cases. A mature design system is more than a library, it is a **visual language** that every contributor can speak fluently. At Cumulus, this language is defined through **style rules** that shape spacing, rhythm, composition, typography, and interactivity.
 </FloatInLeft>
 
-<FloatInRight>
+<FloatInLeft>
+
 These **rules** are not arbitrary. They are **strategic constraints** designed to prevent drift, reduce rework, and build visual trust across every surface. When style rules are honored, interfaces feel effortless. When they are ignored, systems fracture and teams lose confidence. Think of these rules as the blueprint and the guardrail—a **shared contract** that keeps design and development aligned.
-</FloatInRight>
+</FloatInLeft>
+
 
 ---
 
@@ -45,9 +47,11 @@ These **rules** are not arbitrary. They are **strategic constraints** designed t
 **Figure 1.** A predictable spacing rhythm versus irregular intervals. Introducing off‑system values like 12px disrupts alignment and creates hidden maintenance costs.
 </AnimatedFigureCaption>
 
-<FloatInRight>
+<FloatInLeft>
+
 **Why this matters:** Predictable spacing ensures that every designer, engineer, and reviewer speaks the same language. Developers stop debating arbitrary values, designers stop eyeballing margins, and layouts adapt more gracefully to responsive contexts.
-</FloatInRight>
+</FloatInLeft>
+
 
 <FloatInLeft>
 **Common Pitfall:** Avoid introducing “one‑off” spacing. A single hardcoded value can snowball into dozens of inconsistencies that are hard to trace later. When in doubt, choose the nearest approved token.
@@ -57,9 +61,11 @@ These **rules** are not arbitrary. They are **strategic constraints** designed t
 
 ## 🔤 Typography Consistency
 
-<FloatInRight>
+<FloatInLeft>
+
 **Typography is the voice of your interface.** It must be clear, scannable, and trustworthy. Inconsistent heading levels, mismatched line heights, or random font weights create cognitive friction. At Cumulus, we enforce **distinct type scales** and **tokenized font sizes** so that hierarchy remains obvious.
-</FloatInRight>
+</FloatInLeft>
+
 
 <StylePreviewRowCloud
   goodExampleImg="/cumulus-ui-library/img/typography-good.png"
@@ -74,9 +80,11 @@ These **rules** are not arbitrary. They are **strategic constraints** designed t
 Headings should always follow semantic intent, an H2 must visually separate itself from an H3. Spacing above and below text blocks follows **vertical rhythm tokens**, ensuring headers do not collide with content.
 </FloatInLeft>
 
-<FloatInRight>
+<FloatInLeft>
+
 **Common Pitfall:** Reusing the same size for multiple heading levels or applying bold weights indiscriminately. This erodes visual hierarchy and creates uncertainty for both users and maintainers.
-</FloatInRight>
+</FloatInLeft>
+
 
 ---
 
@@ -92,9 +100,11 @@ Every Cumulus component follows a **defined structure**: a header zone, content 
 **Figure 3.** A clear component anatomy creates predictable layouts and reduces error states.
 </AnimatedFigureCaption>
 
-<FloatInRight>
+<FloatInLeft>
+
 **Why this matters:** Without structure, contributors insert features wherever they see fit, leading to drift and confusion. By following these slots, new features integrate seamlessly with existing layouts.
-</FloatInRight>
+</FloatInLeft>
+
 
 <FloatInLeft>
 **Common Pitfall:** Placing error states or buttons outside their designated zones. This creates misalignment, especially in responsive designs where stacking behavior matters most.
@@ -104,9 +114,11 @@ Every Cumulus component follows a **defined structure**: a header zone, content 
 
 ## 🖱️ Interactive Feedback
 
-<FloatInRight>
+<FloatInLeft>
+
 **Feedback is guidance.** Hover states, focus rings, and active states tell users where they can act. Without them, users are left guessing which elements are interactive.
-</FloatInRight>
+</FloatInLeft>
+
 
 <StylePreviewRowCloud
   goodExampleImg="/cumulus-ui-library/img/hover-focus-good.png"
@@ -121,9 +133,11 @@ Every Cumulus component follows a **defined structure**: a header zone, content 
 Cumulus applies **glow states** for key actions. Keyboard focus states must meet **WCAG contrast ratios** and be visible across themes. Transitions are tuned for **150ms ease‑in‑out**, giving smooth feedback without distraction.
 </FloatInLeft>
 
-<FloatInRight>
+<FloatInLeft>
+
 **Common Pitfall:** Removing focus outlines without providing a replacement. This breaks accessibility and leaves keyboard users stranded.
-</FloatInRight>
+</FloatInLeft>
+
 
 ---
 
@@ -143,9 +157,11 @@ Cumulus applies **glow states** for key actions. Keyboard focus states must meet
 **Figure 5.** Subtle shadows create layers without visual clutter.
 </AnimatedFigureCaption>
 
-<FloatInRight>
+<FloatInLeft>
+
 **Why this matters:** Overly strong shadows feel heavy and cheap. Instead, use gentle shadows that scale with component priority, always respecting token spacing and alignment.
-</FloatInRight>
+</FloatInLeft>
+
 
 <ThemeAdaptiveRuleCard
   title="Card Elevation in Dark Mode"
@@ -165,14 +181,18 @@ Cumulus applies **glow states** for key actions. Keyboard focus states must meet
 
 ## ✅ Recap
 
-<FloatInRight>
+<FloatInLeft>
+
 Style rules are **non‑negotiable building blocks**. They accelerate design and development by removing guesswork and enforcing a shared vocabulary. Spacing, typography, structure, feedback, and elevation are all connected—break one, and the system loses integrity.
-</FloatInRight>
+</FloatInLeft>
+
 
 <FloatInLeft>
 Cumulus’s style rules are not just preferences. They are **governance tools** that keep your product scalable, accessible, and polished. Respect these rules, and your components will feel cohesive even before real content is added.
 </FloatInLeft>
 
-<FloatInRight>
+<FloatInLeft>
+
 **Next up:** we connect visual rules with logic. In the **Auth & Permissions** section, you will see how components adapt to user roles, making your system not just beautiful, but secure and dynamic.
-</FloatInRight>
+</FloatInLeft>
+

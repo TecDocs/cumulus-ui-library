@@ -32,21 +32,25 @@ In complex products, this logic cannot remain hidden in the backend; it must be 
 At Cumulus, **permission architecture** is treated as a **first‑class design concern**.
 </FloatInLeft>
 
-<FloatInRight>
+<FloatInLeft>
+
 Instead of leaving **access control** as an invisible backend detail, we embed that logic directly into components.  
 Whether you are building an admin dashboard or a limited‑tier feature, the system ensures that **boundaries are visible, predictable**, and tied directly to **UI states**.  
 The sections below introduce key components that model, enforce, and communicate permission flows clearly.
-</FloatInRight>
+</FloatInLeft>
+
 
 ---
 
 ## Role‑Based Visibility Matrix
 
-<FloatInRight>
+<FloatInLeft>
+
 The foundation of scalable access control is **visibility mapping**.  
 The **`RoleVisibilityMatrix`** provides a single reference of which **user roles** can access which **features**, giving product teams a proactive way to plan restrictions.  
 It replaces scattered permission checks with a **centralized, visual map** that shows **role‑to‑feature alignment** at a glance.
-</FloatInRight>
+</FloatInLeft>
+
 
 <RoleVisibilityMatrix />
 
@@ -60,10 +64,12 @@ Designers use it for role‑accurate wireframes, developers use it to enforce bo
 When permissions are clearly documented, assumptions disappear and mismatches between logic and interface become far less likely.
 </FloatInLeft>
 
-<FloatInRight>
+<FloatInLeft>
+
 By exposing access relationships early, the matrix also surfaces **over‑permissioned roles**, unassigned features, and potential compliance risks.  
 When teams align on access intent, downstream bugs and support tickets drop significantly.
-</FloatInRight>
+</FloatInLeft>
+
 
 ---
 
@@ -81,10 +87,12 @@ The **`PermissionStatePreview`** component visualizes these **intermediate tiers
 **Figure 2.** Components adapting their structure and interactivity based on different permission tiers.
 </AnimatedFigureCaption>
 
-<FloatInRight>
+<FloatInLeft>
+
 By rendering permission tiers explicitly, users see **why** an element is disabled, not just that it is.  
 This transparency strengthens product communication and prevents frustration from unexplained limitations.
-</FloatInRight>
+</FloatInLeft>
+
 
 <FloatInLeft>
 For developers, this means fewer scattered conditionals and more reliance on **standardized, reusable UI states**.  
@@ -95,11 +103,13 @@ Every tier behaves predictably, reducing complexity and making the system more m
 
 ## Toggle‑Based Access Control
 
-<FloatInRight>
+<FloatInLeft>
+
 Testing behavior across multiple roles can be time‑consuming.  
 The **`DynamicAccessToggle`** solves this by letting teams simulate roles **instantly**.  
 Instead of switching accounts or rebuilding sessions, you can preview how the interface changes as you toggle roles in real time.
-</FloatInRight>
+</FloatInLeft>
+
 
 <DynamicAccessToggle />
 
@@ -112,10 +122,12 @@ This component empowers **PMs, designers, QA, and engineers** to cycle through r
 It accelerates testing, eliminates guesswork, and makes misconfigurations obvious before release.
 </FloatInLeft>
 
-<FloatInRight>
+<FloatInLeft>
+
 Live toggling also uncovers **hidden bugs** and layout inconsistencies that might only appear under certain roles.  
 For new team members, the toggle acts as a **learning tool**, revealing how permission tiers influence UI behavior.
-</FloatInRight>
+</FloatInLeft>
+
 
 ---
 
@@ -133,10 +145,12 @@ Instead of assuming a bug, users see context‑aware cues that highlight **requi
 **Figure 4.** Role‑based tags and hover explanations clarify access boundaries directly in the UI.
 </AnimatedFigureCaption>
 
-<FloatInRight>
+<FloatInLeft>
+
 These tags scale from dashboards to pricing pages and adapt across themes.  
 They reduce support inquiries, clarify expectations, and maintain user trust.
-</FloatInRight>
+</FloatInLeft>
+
 
 <FloatInLeft>
 Support teams benefit as well, using tags to troubleshoot roles quickly.  
@@ -147,10 +161,12 @@ For product managers, tags act as visible checkpoints confirming that permission
 
 ## Flow of Permission Logic
 
-<FloatInRight>
+<FloatInLeft>
+
 Permissions are not static; they **flow through every layer** of your stack.  
 The **`PermissionFlowCloud`** visualizes this pipeline from backend identity stores through to UI components, revealing how roles propagate and are enforced.
-</FloatInRight>
+</FloatInLeft>
+
 
 <PermissionFlowCloud />
 
@@ -163,9 +179,11 @@ This visualization becomes a **shared blueprint** across teams.
 It accelerates debugging, helps explain failures, and improves onboarding by connecting backend logic to visual output.
 </FloatInLeft>
 
-<FloatInRight>
+<FloatInLeft>
+
 Clarity at this level prevents logic drift, improves confidence during refactors, and establishes an **auditable access pattern** that can evolve safely.
-</FloatInRight>
+</FloatInLeft>
+
 
 ---
 
@@ -182,11 +200,13 @@ The **`LockedFeatureCallout`** component displays a **clear, informative barrier
 **Figure 6.** Locked callouts give users guidance on how to unlock or request access, improving transparency and trust.
 </AnimatedFigureCaption>
 
-<FloatInRight>
+<FloatInLeft>
+
 This clarity transforms frustration into understanding.  
 Users see that the feature exists, learn why it is unavailable, and know what steps to take next.  
 Developers benefit too, with less custom logic required to handle restricted states.
-</FloatInRight>
+</FloatInLeft>
+
 
 <FloatInLeft>
 Callouts animate smoothly, adapt instantly to role changes, and are ideal for pricing tiers, feature previews, and onboarding journeys.
@@ -196,11 +216,13 @@ Callouts animate smoothly, adapt instantly to role changes, and are ideal for pr
 
 ## Auditing Access Patterns
 
-<FloatInRight>
+<FloatInLeft>
+
 Complex access logic requires **accountability**.  
 The **`AccessAuditTrail`** component surfaces detailed logs showing who attempted access, when, and with what result.  
 This is invaluable for testing, compliance, and long‑term support.
-</FloatInRight>
+</FloatInLeft>
+
 
 <AccessAuditTrail />
 
@@ -214,10 +236,12 @@ During handoffs, they explain why behaviors occur.
 In enterprise settings, they become proof that access logic is applied and enforced consistently.
 </FloatInLeft>
 
-<FloatInRight>
+<FloatInLeft>
+
 Logs can be filtered by role, exported for reviews, and styled to match themes.  
 This adaptability makes them valuable in both agile teams and highly regulated environments.
-</FloatInRight>
+</FloatInLeft>
+
 
 ---
 
@@ -228,10 +252,12 @@ Cumulus treats access control as **design infrastructure**, not an afterthought.
 Every component: tags, matrices, callouts, and toggles, transforms abstract logic into **clear, usable communication**.
 </FloatInLeft>
 
-<FloatInRight>
+<FloatInLeft>
+
 By aligning **visual patterns with logical rules**, we reduce development time, increase product quality, and build **lasting user trust**.  
 Permissions are no longer hidden, they are integrated into the design system itself.
-</FloatInRight>
+</FloatInLeft>
+
 
 ---
 
@@ -242,8 +268,10 @@ Access control defines what users can do. **Onboarding** defines what users can 
 The next section explores how Cumulus brings **role‑aware education**, **guided component previews**, and **interactive pathways** to accelerate learning and confidence.
 </FloatInLeft>
 
-<FloatInRight>
+<FloatInLeft>
+
 Onboarding is the bridge between restriction and mastery.  
 It shows teams not just what roles exist but how to use them effectively.  
 Let us move forward into that journey and see how we turn permission logic into actionable guidance.
-</FloatInRight>
+</FloatInLeft>
+

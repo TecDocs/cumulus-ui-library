@@ -28,9 +28,11 @@ import {
 A component is not truly complete until it functions **seamlessly for every user**. It must work across devices, with assistive technologies, and through a range of input methods. This section explains how accessibility is built into the foundation of our system and what every contributor must **internalize** to uphold it.
 </FloatInLeft>
 
-<FloatInRight>
+<FloatInLeft>
+
 Accessibility at Cumulus means **inclusive interaction**, **clear focus management**, and **sufficient contrast** across all themes. It demands that **keyboard navigation is smooth**, **screen reader support is thorough**, and all indicators align with our **token-driven logic** while meeting **WCAG standards**. When you build with accessibility in mind, you are not only supporting users with disabilities, you are **improving clarity, trust, and usability** for everyone.
-</FloatInRight>
+</FloatInLeft>
+
 
 ---
 
@@ -40,9 +42,11 @@ Accessibility at Cumulus means **inclusive interaction**, **clear focus manageme
 We do not treat accessibility as an afterthought. We **bake it in from the beginning**. It is embedded in **token definitions**, **component logic**, and **documentation patterns**. Every contribution represents a shared agreement on inclusivity, covering **semantic HTML**, **ARIA roles**, **keyboard control**, and **visible focus**. A contribution that cannot be operated or understood by all users cannot be accepted into the system.
 </FloatInLeft>
 
-<FloatInRight>
+<FloatInLeft>
+
 Just as tokens provide **visual consistency**, accessibility ensures **behavioral consistency**. A tooltip that cannot be reached by keyboard is **broken**, no matter how well it looks. A button without a visible focus state might still function, but it **fails inclusivity expectations**. Accessibility binds **visual intent** to **practical usability**, creating a system users can trust.
-</FloatInRight>
+</FloatInLeft>
+
 
 <A11yChecklistCloud
   checks={[
@@ -67,9 +71,11 @@ Just as tokens provide **visual consistency**, accessibility ensures **behaviora
 Every accessible interface begins with **visual clarity**. If text cannot be read or interactive elements blend into the background, no interaction improvements can compensate. This is why **contrast** is critical, and why we rely on **semantic tokens** for all color definitions. Hardcoded values like `#888` or `#111` are never used. Instead, tokens such as `--color-foreground` and `--color-muted` ensure **accessible contrast** across every theme.
 </FloatInLeft>
 
-<FloatInRight>
+<FloatInLeft>
+
 **Focus management** is equally important. Removing outlines without providing an accessible replacement breaks the experience for keyboard users. A proper focus state must be **highly visible**, **adaptable**, and **driven by tokens** so that it remains consistent in light and dark themes. Accessibility does not limit aesthetics, it ensures **aesthetics support usability**.
-</FloatInRight>
+</FloatInLeft>
+
 
 <ContrastFailPreview
   fail={{ text: "#888", bg: "#fff", label: "Low Contrast" }}
@@ -88,9 +94,11 @@ Every accessible interface begins with **visual clarity**. If text cannot be rea
 All components must follow accessibility **patterns that guarantee reliability** across devices and input methods. **Buttons** require accessible labels and visible focus states. **Inputs** must be operable via screen readers and provide clear validation messaging. **Tooltips** cannot rely solely on hover. These are not suggestions, they are **non‑negotiable standards**.
 </FloatInLeft>
 
-<FloatInRight>
+<FloatInLeft>
+
 Complex components such as **modals** must trap focus correctly and handle escape key behavior. **Checkboxes** must behave like their native equivalents, including keyboard toggling and proper labeling. **Forms** must use real `<label>` elements rather than placeholders. These expectations ensure that every contribution produces a **usable and inclusive experience** for all.
-</FloatInRight>
+</FloatInLeft>
+
 
 <CloudImpactMeter
   title="System Impact: Moderate"
@@ -111,14 +119,18 @@ Complex components such as **modals** must trap focus correctly and handle escap
 Accessibility in Cumulus is **built in**, not bolted on. It lives in tokens, in development patterns, and in every review checklist. By ensuring that your components meet these requirements, you are not only meeting compliance guidelines, you are **enhancing usability, trust, and inclusivity** for all users.
 </FloatInLeft>
 
-<FloatInRight>
+<FloatInLeft>
+
 But accessibility is only one part of contribution quality. Equally important are the **style rules** that govern how we write, structure, and present our components. Consistent language, predictable structure, and clear tone ensure that the documentation itself is as accessible as the components it describes. These rules build a shared voice across the system.
-</FloatInRight>
+</FloatInLeft>
+
 
 <FloatInLeft>
 Next, you will explore those **style rules**. You will learn how to write documentation that is clear, scalable, and aligned with the system’s principles. When combined with accessibility best practices, these rules make every contribution not only functional and inclusive, but **coherent and easy to adopt**.
 </FloatInLeft>
 
-<FloatInRight>
+<FloatInLeft>
+
 By mastering accessibility and understanding style governance, you are now ready to step into the next layer of the knowledge base: the guidelines that shape **how we communicate** our design system. Let’s move forward and ensure your contributions are both **accessible and consistently expressed**.
-</FloatInRight>
+</FloatInLeft>
+

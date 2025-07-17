@@ -38,9 +38,11 @@ Versioning is the governance layer of your design system. It defines how changes
 Design systems often begin as isolated tools. Once adopted across multiple brands and teams, they transform into infrastructure. Infrastructure needs visibility and traceability. Whether you are updating a token, releasing a component variant, or rolling out an accessibility enhancement, the system should always answer questions like: what changed, why it changed, and how to roll back if needed.
 </FloatInLeft>
 
-<FloatInRight>
+<FloatInLeft>
+
 Versioning is how you provide those answers. It creates a shared language between everyone who builds or consumes the system. It enables controlled rollouts, structured deprecations, and safe experimentation. Most importantly, it prevents gradual design drift by enforcing alignment between design intent and real implementation.
-</FloatInRight>
+</FloatInLeft>
+
 
 ---
 
@@ -56,9 +58,11 @@ The most widely adopted method for design systems is semantic versioning. It bre
 **Patch** means a small, non‑breaking improvement such as renaming a token for clarity or fixing a spacing inconsistency.
 </CalloutBox>
 
-<FloatInRight>
+<FloatInLeft>
+
 Semantic versioning allows teams to see at a glance whether a release will require refactoring, simple adoption, or no action at all. A minor adjustment to a border radius can affect many screens, so clear communication at this level avoids surprises during integration.
-</FloatInRight>
+</FloatInLeft>
+
 
 ---
 
@@ -83,9 +87,11 @@ Tokens form the DNA of your design system, and like any DNA they evolve over tim
 Figure 1. A lifecycle flow that illustrates how tokens progress through definition, release, updates, and deprecation.
 </AnimatedFigureCaption>
 
-<FloatInRight>
+<FloatInLeft>
+
 Visualizing token lifecycles builds clarity. When contributors see where a token is in its evolution, they understand whether it is safe to use, should be migrated, or needs further review. This approach reduces uncertainty and improves adoption across teams.
-</FloatInRight>
+</FloatInLeft>
+
 
 ---
 
@@ -107,9 +113,11 @@ Tokens are rarely static. As branding evolves or new platforms are introduced, t
 Figure 2. A lineage view showing how brand colors evolved across versions and themes.
 </AnimatedFigureCaption>
 
-<FloatInRight>
+<FloatInLeft>
+
 A lineage record prevents accidental reuse of outdated tokens and clarifies migration paths. Instead of relying on institutional memory, you have visible documentation of each decision and its impact.
-</FloatInRight>
+</FloatInLeft>
+
 
 ---
 
@@ -128,9 +136,11 @@ Deprecation is not simply removal. It is an intentional phase where tokens are m
 By integrating deprecation warnings into linters and build processes, teams receive proactive guidance. This turns deprecation into an opportunity to educate and align rather than a last‑minute scramble.
 </FloatInLeft>
 
-<FloatInRight>
+<FloatInLeft>
+
 Effective deprecation strategies show contributors not only what to stop using, but also what to use instead. This keeps work moving forward while reducing technical and visual debt.
-</FloatInRight>
+</FloatInLeft>
+
 
 ---
 
@@ -145,9 +155,11 @@ Tokens do not exist in isolation. They are consumed by components, which are the
 Figure 4. A diagram illustrating versioning relationships between tokens, components, and themes.
 </AnimatedFigureCaption>
 
-<FloatInRight>
+<FloatInLeft>
+
 This layered strategy allows you to update a theme without breaking components, or to refactor a component while preserving existing tokens. By isolating changes in this way, you can evolve confidently and deploy updates incrementally.
-</FloatInRight>
+</FloatInLeft>
+
 
 ---
 
@@ -171,9 +183,11 @@ Sometimes tokens diverge rather than replace each other directly. A color may re
 Figure 6. A comparison tool that shows how legacy and updated token values differ.
 </AnimatedFigureCaption>
 
-<FloatInRight>
+<FloatInLeft>
+
 Displaying differences between versions allows contributors to quickly assess impact. When onboarding new teams or migrating legacy styles, this type of comparison builds confidence and speeds adoption.
-</FloatInRight>
+</FloatInLeft>
+
 
 ---
 
@@ -187,9 +201,11 @@ Versioning builds trust. It creates a sense of safety by assuring contributors t
 A design system earns adoption not only by what it offers but by how predictably it evolves. Versioning is the mechanism that provides this stability.
 </CloudNoteBox>
 
-<FloatInRight>
+<FloatInLeft>
+
 When versioning is visible and well documented, teams align more easily. Changes stop feeling disruptive and instead become part of a rhythm that drives system maturity.
-</FloatInRight>
+</FloatInLeft>
+
 
 ---
 
@@ -207,6 +223,8 @@ A strong versioning strategy is supported by monitoring and governance. Dashboar
 Versioning is not just a release process. It is a long term protocol for managing change. By versioning tokens, components, and themes, you create a system that grows without losing its integrity. Every update becomes an opportunity for improvement rather than a source of risk.
 </FloatInLeft>
 
-<FloatInRight>
+<FloatInLeft>
+
 You now have the foundation for sustainable evolution. Next, you will move into the **Contribution Guide**. There you will learn how to submit updates, document decisions, and ensure that every addition strengthens rather than weakens the system. Contribution is where versioning meets real collaboration, creating a knowledge base that is alive, reliable, and always ready for the future.
-</FloatInRight>
+</FloatInLeft>
+

@@ -21,17 +21,21 @@ Before a single line of content is written, these templates define **page struct
 They are stored in version‑controlled repositories such as GitHub or Bitbucket, integrated directly with content management systems, and deployed through CI/CD pipelines so that updates can roll out safely without breaking historical exports.
 </FloatInLeft>
 
-<FloatInRight>
+<FloatInLeft>
+
 **Consistency is more than a design goal; it is a compliance requirement.** For example, at a global e‑commerce company, a single PDF template might handle invoices for twenty regions, surfacing **audit numbers**, **version histories**, and **confidential disclaimers** in a predictable way so regulators trust the output. Templates deliver that repeatable structure while being automatically validated against schema checks in build pipelines, ensuring new releases never introduce regressions.
-</FloatInRight>
+</FloatInLeft>
+
 
 <FloatInLeft>
 Consider a real incident: a product launch at a large cloud provider was delayed by weeks because a critical export omitted a legally required confidentiality line in the footer. That error forced an entire recall of PDF documentation. With **predefined templates integrated into automated export workflows**, errors like this are caught long before they reach customers, saving weeks of costly rework and reputational damage.
 </FloatInLeft>
 
-<FloatInRight>
+<FloatInLeft>
+
 **PDF templates also serve as the connective tissue between teams.** Writers, designers, compliance officers, and engineers can all reference the same starting point. In companies like Amazon or Google, content flows through many hands, and a shared template system, backed by automated testing and centralized storage, is what prevents last minute fire drills before a release.
-</FloatInRight>
+</FloatInLeft>
+
 
 <FloatInLeft>
 The sections below show how a template is **previewed**, **validated**, **scored**, and finally **selected** for use. Each component is interactive so you can see how these steps would actually feel in a real publishing environment, from a documentation portal to a CI/CD‑driven PDF export system.
@@ -53,9 +57,11 @@ The sections below show how a template is **previewed**, **validated**, **scored
 **Previewing templates is the first safeguard before publishing.** Teams can see exactly how a header, footer, or watermark appears. At a FAANG company, a content strategist might toggle between an internal engineering report and an external partner agreement, each with different confidentiality marks, before committing changes to a shared repository.
 </FloatInLeft>
 
-<FloatInRight>
+<FloatInLeft>
+
 The cards below highlight **multiple layout patterns.** Notice how each option balances branding with functional metadata. For instance, an instructional template might favor readability, while a policy header includes revision histories and signatures. A technical writer or documentation lead would typically own this step, validating that the preview matches stakeholder expectations before triggering automated builds.
-</FloatInRight>
+</FloatInLeft>
+
 
 <PDFPreviewPanel previews={[
   { title: "Policy Header Example", description: "A regulatory style header with version numbers and audit marks." },
@@ -76,9 +82,11 @@ Once a preview is chosen, the **next step is validation.** Teams review placemen
 
 ## Reinforcing Compliance Checks
 
-<FloatInRight>
+<FloatInLeft>
+
 **Compliance tips appear contextually during the template selection process.** In large organizations, reminders like these prevent human error. Imagine a financial reporting team at Meta reviewing a new invoice template. A prompt to double check watermark placement can save weeks of rework and avoid compliance penalties.
-</FloatInRight>
+</FloatInLeft>
+
 
 <ComplianceTipBox tip="Always verify that headers contain version stamps and footers include mandatory legal metadata before releasing a template." />
 
@@ -94,9 +102,11 @@ These reminders build a culture of diligence. Rather than relying on tribal know
 
 ## Scoring and Measuring Template Quality
 
-<FloatInRight>
+<FloatInLeft>
+
 After validation, **templates are scored for quality.** At a company like Google, a documentation team might assign scores for brand alignment, audit readiness, and variable coverage. These scores feed into dashboards or build pipelines, giving visibility into where templates stand before mass rollouts.
-</FloatInRight>
+</FloatInLeft>
+
 
 <OutputQualityMeter score={94} />
 
@@ -112,9 +122,11 @@ These scores provide a shared language. Instead of saying “this template feels
 
 ## Comparing Multiple Template Options
 
-<FloatInRight>
+<FloatInLeft>
+
 Finally, teams often **compare multiple template options** before finalizing. A carousel interface provides side‑by‑side comparisons. In a real scenario, a company like Amazon might test a new shipment template alongside a legacy one to decide which performs best across regions, while a design system lead gathers feedback and submits changes through pull requests.
-</FloatInRight>
+</FloatInLeft>
+
 
 <ExportOptionCarousel options={[
   { title: "Audit Template", description: "Compliance heavy design with watermarks and version codes." },
@@ -135,10 +147,12 @@ Finally, teams often **compare multiple template options** before finalizing. A 
 
 ## What's Next: Transitioning into Export Workflows
 
-<FloatInRight>
+<FloatInLeft>
+
 **Next Steps:**  
 In the next section, you will explore **Export Workflows.** This is where templates connect with variables, snippets, and approval gates to form a **full publishing pipeline.**  
 You will see how enterprise teams schedule exports in CI/CD pipelines, validate them against automated compliance scripts, and ensure that every document meets regulations without last minute scrambles.  
 By understanding both templates and workflows, you gain a complete picture of how large organizations deliver consistent, high‑quality documentation worldwide.  
 You will also learn how workflows adapt for different product lines, how audit teams rely on automated metadata for traceability, and how continuous improvements to templates feed directly into efficient publishing processes at scale.
-</FloatInRight>
+</FloatInLeft>
+
