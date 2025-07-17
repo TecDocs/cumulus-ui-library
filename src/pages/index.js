@@ -181,10 +181,10 @@ function HomeInner() {
         lineHeight: '1.8',
       }}
     >
-      <li style={{ marginBottom: '0.6rem' }}>Frontend teams needing reusable components across projects</li>
-      <li style={{ marginBottom: '0.6rem' }}>Designers who require live previews of UI states to iterate quickly</li>
-      <li style={{ marginBottom: '0.6rem' }}>Compliance officers tracking SOPs, process audits, and sign-offs</li>
-      <li>Startups and enterprises seeking to align design, engineering, and documentation in a single hub</li>
+      <li style={{ marginBottom: '1rem', fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '0.6rem' }}>Frontend teams needing reusable components across projects</li>
+      <li style={{ marginBottom: '1rem', fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '0.6rem' }}>Designers who require live previews of UI states to iterate quickly</li>
+      <li style={{ marginBottom: '1rem', fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '0.6rem' }}>Compliance officers tracking SOPs, process audits, and sign-offs</li>
+      <li style={{ marginBottom: '1rem', fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '0.6rem' }}>Startups and enterprises seeking to align design, engineering, and documentation in a single hub</li>
     </ul>
   </motion.div>
 </motion.section>
@@ -262,7 +262,7 @@ function HomeInner() {
       These cards demonstrate the core philosophy: generous spacing, subtle shadows, and carefully chosen iconography that provide focus without distraction. 
       Whether previewing a Storybook component or auditing an SOP, teams get a seamless experience.
     </p>
-    <p style={{ fontSize: '1.05rem', lineHeight: '1.7' }}>
+   <p style={{ marginBottom: '1rem', fontSize: '1.05rem', lineHeight: '1.7' }}>
       This level of detail allows teams to collaborate better, iterate faster, and maintain confidence in their documentation and design systems for years to come.
     </p>
   </motion.div>
